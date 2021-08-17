@@ -24,27 +24,27 @@
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="play" id="hj8-Ya-84i"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
-                    <rect key="frame" x="169" y="20" width="142" height="32"/>
+                    <rect key="frame" x="154" y="165" width="172" height="62"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="138" id="Qes-EU-QvO"/>
-                        <constraint firstAttribute="height" constant="32" id="YpB-RK-ZCe"/>
+                        <constraint firstAttribute="height" constant="62" id="ES2-2S-mt9"/>
+                        <constraint firstAttribute="width" constant="168" id="lMw-Qs-x4n"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="key" id="xVj-Fc-x1s">
-                        <font key="font" metaFont="system" size="23"/>
+                        <font key="font" metaFont="system" size="43"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="A9J-wV-pgc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Asm-Aa-wsc"/>
-                <constraint firstAttribute="trailing" secondItem="A9J-wV-pgc" secondAttribute="trailing" id="EPC-NZ-XPI"/>
-                <constraint firstAttribute="bottom" secondItem="J4W-Bd-Lib" secondAttribute="bottom" constant="20" symbolic="YES" id="HWR-X9-Ili"/>
-                <constraint firstAttribute="bottom" secondItem="A9J-wV-pgc" secondAttribute="bottom" id="e55-On-Tza"/>
-                <constraint firstItem="J4W-Bd-Lib" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="vCn-y2-Rtu"/>
-                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="vIE-Lg-GEJ"/>
+                <constraint firstItem="J4W-Bd-Lib" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="O59-qt-wLX"/>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ZIH-2N-CHt"/>
+                <constraint firstItem="J4W-Bd-Lib" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="hqr-7z-w0D"/>
+                <constraint firstAttribute="bottom" secondItem="A9J-wV-pgc" secondAttribute="bottom" id="op1-Re-kMw"/>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="r2P-LP-KXw"/>
+                <constraint firstAttribute="trailing" secondItem="A9J-wV-pgc" secondAttribute="trailing" id="uLc-8i-Qps"/>
             </constraints>
-            <point key="canvasLocation" x="86" y="113"/>
+            <point key="canvasLocation" x="152" y="42"/>
         </customView>
     </objects>
     <resources>

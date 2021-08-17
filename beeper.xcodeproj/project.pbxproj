@@ -7,16 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		155DEC0725B9B6FB1889A2C0 /* Pods_beeperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4581FDD9A155A037D64A63D0 /* Pods_beeperTests.framework */; };
+		4F62360B1B6D6D0717219E6E /* Pods_beeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604F00C6A4FED32373514448 /* Pods_beeper.framework */; };
+		F15A98E573AD7C3F2D9FE9BA /* Pods_beeper_beeperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1F01AC5AE1AE1403F11D4B /* Pods_beeper_beeperUITests.framework */; };
 		F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */; };
 		F53BCC2126CC04C900E19E41 /* SoundCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */; };
 		F53BCC2326CC05EC00E19E41 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC2226CC05EC00E19E41 /* play.png */; };
-		F53BCC2826CC0CE900E19E41 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BCC2726CC0CE900E19E41 /* SoundView.swift */; };
 		F5A3571F26CBFE9000B0C6FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3571E26CBFE9000B0C6FE /* AppDelegate.swift */; };
 		F5A3572126CBFE9000B0C6FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3572026CBFE9000B0C6FE /* ViewController.swift */; };
 		F5A3572326CBFE9000B0C6FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A3572226CBFE9000B0C6FE /* Assets.xcassets */; };
 		F5A3572626CBFE9000B0C6FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5A3572426CBFE9000B0C6FE /* Main.storyboard */; };
 		F5A3573226CBFE9000B0C6FE /* beeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3573126CBFE9000B0C6FE /* beeperTests.swift */; };
 		F5A3573D26CBFE9000B0C6FE /* beeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3573C26CBFE9000B0C6FE /* beeperUITests.swift */; };
+		F5A7D5D126CC0F8A00DBB253 /* chirp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A7D5CC26CC0F8A00DBB253 /* chirp.mp3 */; };
+		F5A7D5D226CC0F8A00DBB253 /* bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A7D5CD26CC0F8A00DBB253 /* bell.mp3 */; };
+		F5A7D5D326CC0F8A00DBB253 /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A7D5CE26CC0F8A00DBB253 /* coin.mp3 */; };
+		F5A7D5D426CC0F8A00DBB253 /* badumtss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A7D5CF26CC0F8A00DBB253 /* badumtss.mp3 */; };
+		F5A7D5D526CC0F8A00DBB253 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A7D5D026CC0F8A00DBB253 /* beep.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0160A482BA7DA26175660569 /* Pods-beeperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeperTests.release.xcconfig"; path = "Target Support Files/Pods-beeperTests/Pods-beeperTests.release.xcconfig"; sourceTree = "<group>"; };
+		4581FDD9A155A037D64A63D0 /* Pods_beeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		604F00C6A4FED32373514448 /* Pods_beeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		642E677DEB27B7845D7FD4A2 /* Pods-beeperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeperTests.debug.xcconfig"; path = "Target Support Files/Pods-beeperTests/Pods-beeperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		908096FDAE80AAFA8A727AC2 /* Pods-beeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeper.debug.xcconfig"; path = "Target Support Files/Pods-beeper/Pods-beeper.debug.xcconfig"; sourceTree = "<group>"; };
+		BF20DA2DC02B19EDB94A9B68 /* Pods-beeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeper.release.xcconfig"; path = "Target Support Files/Pods-beeper/Pods-beeper.release.xcconfig"; sourceTree = "<group>"; };
+		D0D23E3946F3A8BF81454CAB /* Pods-beeper-beeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeper-beeperUITests.debug.xcconfig"; path = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE1F01AC5AE1AE1403F11D4B /* Pods_beeper_beeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeper_beeperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E36536D6B9E5F7F2A0D401 /* Pods-beeper-beeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeper-beeperUITests.release.xcconfig"; path = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCollectionViewItem.swift; sourceTree = "<group>"; };
 		F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundCollectionViewItem.xib; sourceTree = "<group>"; };
 		F53BCC2226CC05EC00E19E41 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
-		F53BCC2726CC0CE900E19E41 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		F5A3571B26CBFE9000B0C6FE /* beeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A3571E26CBFE9000B0C6FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A3572026CBFE9000B0C6FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +69,11 @@
 		F5A3573826CBFE9000B0C6FE /* beeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = beeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A3573C26CBFE9000B0C6FE /* beeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beeperUITests.swift; sourceTree = "<group>"; };
 		F5A3573E26CBFE9000B0C6FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5A7D5CC26CC0F8A00DBB253 /* chirp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chirp.mp3; sourceTree = "<group>"; };
+		F5A7D5CD26CC0F8A00DBB253 /* bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bell.mp3; sourceTree = "<group>"; };
+		F5A7D5CE26CC0F8A00DBB253 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
+		F5A7D5CF26CC0F8A00DBB253 /* badumtss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = badumtss.mp3; sourceTree = "<group>"; };
+		F5A7D5D026CC0F8A00DBB253 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F62360B1B6D6D0717219E6E /* Pods_beeper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				155DEC0725B9B6FB1889A2C0 /* Pods_beeperTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,19 +97,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15A98E573AD7C3F2D9FE9BA /* Pods_beeper_beeperUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		109D8BEF9F9FF5FE91AA7231 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				604F00C6A4FED32373514448 /* Pods_beeper.framework */,
+				DE1F01AC5AE1AE1403F11D4B /* Pods_beeper_beeperUITests.framework */,
+				4581FDD9A155A037D64A63D0 /* Pods_beeperTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		732F0EF0BA9115A8DC0802AA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				908096FDAE80AAFA8A727AC2 /* Pods-beeper.debug.xcconfig */,
+				BF20DA2DC02B19EDB94A9B68 /* Pods-beeper.release.xcconfig */,
+				D0D23E3946F3A8BF81454CAB /* Pods-beeper-beeperUITests.debug.xcconfig */,
+				E5E36536D6B9E5F7F2A0D401 /* Pods-beeper-beeperUITests.release.xcconfig */,
+				642E677DEB27B7845D7FD4A2 /* Pods-beeperTests.debug.xcconfig */,
+				0160A482BA7DA26175660569 /* Pods-beeperTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F5A3571226CBFE9000B0C6FE = {
 			isa = PBXGroup;
 			children = (
+				F5A7D5D626CC0F9C00DBB253 /* Resources */,
 				F5A3571D26CBFE9000B0C6FE /* beeper */,
 				F5A3573026CBFE9000B0C6FE /* beeperTests */,
 				F5A3573B26CBFE9000B0C6FE /* beeperUITests */,
 				F5A3571C26CBFE9000B0C6FE /* Products */,
+				732F0EF0BA9115A8DC0802AA /* Pods */,
+				109D8BEF9F9FF5FE91AA7231 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,11 +153,9 @@
 		F5A3571D26CBFE9000B0C6FE /* beeper */ = {
 			isa = PBXGroup;
 			children = (
-				F53BCC2226CC05EC00E19E41 /* play.png */,
 				F5A3571E26CBFE9000B0C6FE /* AppDelegate.swift */,
 				F5A3572026CBFE9000B0C6FE /* ViewController.swift */,
 				F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */,
-				F53BCC2726CC0CE900E19E41 /* SoundView.swift */,
 				F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */,
 				F5A3572226CBFE9000B0C6FE /* Assets.xcassets */,
 				F5A3572426CBFE9000B0C6FE /* Main.storyboard */,
@@ -136,6 +183,19 @@
 			path = beeperUITests;
 			sourceTree = "<group>";
 		};
+		F5A7D5D626CC0F9C00DBB253 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F5A7D5CF26CC0F8A00DBB253 /* badumtss.mp3 */,
+				F5A7D5D026CC0F8A00DBB253 /* beep.mp3 */,
+				F5A7D5CD26CC0F8A00DBB253 /* bell.mp3 */,
+				F5A7D5CC26CC0F8A00DBB253 /* chirp.mp3 */,
+				F5A7D5CE26CC0F8A00DBB253 /* coin.mp3 */,
+				F53BCC2226CC05EC00E19E41 /* play.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,10 +203,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5A3574126CBFE9000B0C6FE /* Build configuration list for PBXNativeTarget "beeper" */;
 			buildPhases = (
+				A01700C3C730E9ADD5F8180C /* [CP] Check Pods Manifest.lock */,
 				F5A3571726CBFE9000B0C6FE /* Sources */,
 				F5A3571826CBFE9000B0C6FE /* Frameworks */,
 				F5A3571926CBFE9000B0C6FE /* Resources */,
 				F53BCC2426CC0AA300E19E41 /* ShellScript */,
+				910AF0CA2B084F0EE1585A97 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -161,6 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5A3574426CBFE9000B0C6FE /* Build configuration list for PBXNativeTarget "beeperTests" */;
 			buildPhases = (
+				84BD55E063AAC86D80224992 /* [CP] Check Pods Manifest.lock */,
 				F5A3572926CBFE9000B0C6FE /* Sources */,
 				F5A3572A26CBFE9000B0C6FE /* Frameworks */,
 				F5A3572B26CBFE9000B0C6FE /* Resources */,
@@ -179,9 +242,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F5A3574726CBFE9000B0C6FE /* Build configuration list for PBXNativeTarget "beeperUITests" */;
 			buildPhases = (
+				5090F27BACFAB9A2A75E2136 /* [CP] Check Pods Manifest.lock */,
 				F5A3573426CBFE9000B0C6FE /* Sources */,
 				F5A3573526CBFE9000B0C6FE /* Frameworks */,
 				F5A3573626CBFE9000B0C6FE /* Resources */,
+				9BD5B13A09CC5A104769CFDC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -242,9 +307,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A3572326CBFE9000B0C6FE /* Assets.xcassets in Resources */,
+				F5A7D5D126CC0F8A00DBB253 /* chirp.mp3 in Resources */,
+				F5A7D5D526CC0F8A00DBB253 /* beep.mp3 in Resources */,
+				F5A7D5D326CC0F8A00DBB253 /* coin.mp3 in Resources */,
 				F53BCC2126CC04C900E19E41 /* SoundCollectionViewItem.xib in Resources */,
 				F5A3572626CBFE9000B0C6FE /* Main.storyboard in Resources */,
+				F5A7D5D426CC0F8A00DBB253 /* badumtss.mp3 in Resources */,
 				F53BCC2326CC05EC00E19E41 /* play.png in Resources */,
+				F5A7D5D226CC0F8A00DBB253 /* bell.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +335,106 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5090F27BACFAB9A2A75E2136 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-beeper-beeperUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84BD55E063AAC86D80224992 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-beeperTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		910AF0CA2B084F0EE1585A97 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beeper/Pods-beeper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beeper/Pods-beeper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-beeper/Pods-beeper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BD5B13A09CC5A104769CFDC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A01700C3C730E9ADD5F8180C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-beeper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F53BCC2426CC0AA300E19E41 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,7 +459,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F53BCC2826CC0CE900E19E41 /* SoundView.swift in Sources */,
 				F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */,
 				F5A3572126CBFE9000B0C6FE /* ViewController.swift in Sources */,
 				F5A3571F26CBFE9000B0C6FE /* AppDelegate.swift in Sources */,
@@ -456,6 +625,7 @@
 		};
 		F5A3574226CBFE9000B0C6FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 908096FDAE80AAFA8A727AC2 /* Pods-beeper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,6 +649,7 @@
 		};
 		F5A3574326CBFE9000B0C6FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF20DA2DC02B19EDB94A9B68 /* Pods-beeper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -502,6 +673,7 @@
 		};
 		F5A3574526CBFE9000B0C6FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 642E677DEB27B7845D7FD4A2 /* Pods-beeperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -524,6 +696,7 @@
 		};
 		F5A3574626CBFE9000B0C6FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0160A482BA7DA26175660569 /* Pods-beeperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -546,6 +719,7 @@
 		};
 		F5A3574826CBFE9000B0C6FE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0D23E3946F3A8BF81454CAB /* Pods-beeper-beeperUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -566,6 +740,7 @@
 		};
 		F5A3574926CBFE9000B0C6FE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E36536D6B9E5F7F2A0D401 /* Pods-beeper-beeperUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
