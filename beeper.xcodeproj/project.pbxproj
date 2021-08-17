@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */; };
+		F53BCC2126CC04C900E19E41 /* SoundCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */; };
+		F53BCC2326CC05EC00E19E41 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC2226CC05EC00E19E41 /* play.png */; };
+		F53BCC2826CC0CE900E19E41 /* SoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BCC2726CC0CE900E19E41 /* SoundView.swift */; };
 		F5A3571F26CBFE9000B0C6FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3571E26CBFE9000B0C6FE /* AppDelegate.swift */; };
 		F5A3572126CBFE9000B0C6FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A3572026CBFE9000B0C6FE /* ViewController.swift */; };
 		F5A3572326CBFE9000B0C6FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F5A3572226CBFE9000B0C6FE /* Assets.xcassets */; };
@@ -33,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCollectionViewItem.swift; sourceTree = "<group>"; };
+		F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundCollectionViewItem.xib; sourceTree = "<group>"; };
+		F53BCC2226CC05EC00E19E41 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
+		F53BCC2726CC0CE900E19E41 /* SoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundView.swift; sourceTree = "<group>"; };
 		F5A3571B26CBFE9000B0C6FE /* beeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = beeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5A3571E26CBFE9000B0C6FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F5A3572026CBFE9000B0C6FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,8 +104,12 @@
 		F5A3571D26CBFE9000B0C6FE /* beeper */ = {
 			isa = PBXGroup;
 			children = (
+				F53BCC2226CC05EC00E19E41 /* play.png */,
 				F5A3571E26CBFE9000B0C6FE /* AppDelegate.swift */,
 				F5A3572026CBFE9000B0C6FE /* ViewController.swift */,
+				F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */,
+				F53BCC2726CC0CE900E19E41 /* SoundView.swift */,
+				F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */,
 				F5A3572226CBFE9000B0C6FE /* Assets.xcassets */,
 				F5A3572426CBFE9000B0C6FE /* Main.storyboard */,
 				F5A3572726CBFE9000B0C6FE /* Info.plist */,
@@ -134,6 +146,7 @@
 				F5A3571726CBFE9000B0C6FE /* Sources */,
 				F5A3571826CBFE9000B0C6FE /* Frameworks */,
 				F5A3571926CBFE9000B0C6FE /* Resources */,
+				F53BCC2426CC0AA300E19E41 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -186,6 +199,7 @@
 		F5A3571326CBFE9000B0C6FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
@@ -228,7 +242,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A3572326CBFE9000B0C6FE /* Assets.xcassets in Resources */,
+				F53BCC2126CC04C900E19E41 /* SoundCollectionViewItem.xib in Resources */,
 				F5A3572626CBFE9000B0C6FE /* Main.storyboard in Resources */,
+				F53BCC2326CC05EC00E19E41 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,11 +264,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F53BCC2426CC0AA300E19E41 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xattr -cr ~/Library/Developer/Xcode/DerivedData || echo Clear\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F5A3571726CBFE9000B0C6FE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F53BCC2826CC0CE900E19E41 /* SoundView.swift in Sources */,
+				F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */,
 				F5A3572126CBFE9000B0C6FE /* ViewController.swift in Sources */,
 				F5A3571F26CBFE9000B0C6FE /* AppDelegate.swift in Sources */,
 			);
@@ -422,6 +460,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = beeper/beeper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = J6Y2E28XZT;
@@ -433,6 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cowsayshow.beeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -443,6 +483,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = beeper/beeper.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = J6Y2E28XZT;
@@ -454,6 +495,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cowsayshow.beeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

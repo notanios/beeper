@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SoundCollectionViewItem" customModule="beeper" customModuleProvider="target">
+            <connections>
+                <outlet property="imageLabel" destination="A9J-wV-pgc" id="EMR-x3-S4z"/>
+                <outlet property="imageView" destination="A9J-wV-pgc" id="ave-vh-95I"/>
+                <outlet property="titleLabel" destination="J4W-Bd-Lib" id="P2J-3N-3gT"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="392"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-wV-pgc">
+                    <rect key="frame" x="0.0" y="0.0" width="480" height="392"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="play" id="hj8-Ya-84i"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
+                    <rect key="frame" x="169" y="20" width="142" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="138" id="Qes-EU-QvO"/>
+                        <constraint firstAttribute="height" constant="32" id="YpB-RK-ZCe"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="key" id="xVj-Fc-x1s">
+                        <font key="font" metaFont="system" size="23"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Asm-Aa-wsc"/>
+                <constraint firstAttribute="trailing" secondItem="A9J-wV-pgc" secondAttribute="trailing" id="EPC-NZ-XPI"/>
+                <constraint firstAttribute="bottom" secondItem="J4W-Bd-Lib" secondAttribute="bottom" constant="20" symbolic="YES" id="HWR-X9-Ili"/>
+                <constraint firstAttribute="bottom" secondItem="A9J-wV-pgc" secondAttribute="bottom" id="e55-On-Tza"/>
+                <constraint firstItem="J4W-Bd-Lib" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="vCn-y2-Rtu"/>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="vIE-Lg-GEJ"/>
+            </constraints>
+            <point key="canvasLocation" x="86" y="113"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="play" width="392" height="392"/>
+    </resources>
+</document>
