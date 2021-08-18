@@ -18,8 +18,8 @@ let sounds = ["beep", "bell", "badumtss", "coin", "chirp"]
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, CocoaMQTTDelegate {
     
-    var timer: Timer?
-    
+    @IBOutlet weak var isServerSwitch: NSSwitch!
+    @IBOutlet weak var playSwitch: NSSwitch!
     @IBOutlet weak var collectionView: NSCollectionView!
     var players: [[AVAudioPlayer]]?
     var mqtt:CocoaMQTT?
@@ -57,8 +57,10 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             return nil
         }
         
-        self.testMQTT()
+        self.setupMQTT()
     }
+    
+//    MARK: IB Actions
     
 //    MARK: MQTT
     
@@ -79,8 +81,8 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
         print("💬 Did receive message: \(message.string!)")
-        if ["3", "e", "d", "c"].contains(message.string!) {
-            self.players![0][2].play()
+        if let indexPath = indexPath(ofLetter: message.string!) {
+            self.handle(RemoteIndexPath: indexPath)
         }
     }
     
@@ -96,26 +98,17 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
         print("🚫 disconnect")
-        if let timer = self.timer, timer.isValid {
-            self.timer!.invalidate()
-            self.timer = nil
-            self.mqtt?.unsubscribe("soundboard/play")
-        }
+        self.mqtt?.unsubscribe("soundboard/play")
     }
     
     func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
         print("👌 connect")
         self.mqtt?.subscribe("soundboard/play")
-        self.timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { _ in
-            if let connection = self.mqtt {
-                connection.publish("soundboard/play", withString: "3")
-            }
-        })
     }
     
 //    MARK: Custom
     
-    func testMQTT() {
+    func setupMQTT() {
         let clientID = "CocoaMQTT" + String(ProcessInfo().processIdentifier)
         self.mqtt = CocoaMQTT(clientID: clientID, host: "40.68.246.153", port: 1883)
         self.mqtt!.username = "vlad"
@@ -128,13 +121,36 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     }
     
     func handle(Event event: NSEvent) {
+        if let indexPath = indexPath(ofLetter: event.characters!) {
+            handle(LocalIndexPath: indexPath)
+        }
+    }
+    
+    func handle(LocalIndexPath indexPath: IndexPath) {
+        if self.isServerSwitch.state == .off {
+            self.mqtt!.publish("soundboard/play", withString: letters[indexPath.section][indexPath.item])
+        }
+        
+        if self.playSwitch.state == .on {
+            self.players![indexPath.section][indexPath.item].play()
+        }
+    }
+    
+    func handle(RemoteIndexPath indexPath: IndexPath) {
+        if self.isServerSwitch.state == .on, self.playSwitch.state == .on {
+            self.players![indexPath.section][indexPath.item].play()
+        }
+    }
+    
+    func indexPath(ofLetter string: String) -> IndexPath? {
         for (i, array) in letters.enumerated() {
             for (j, letter) in array.enumerated() {
-                if letter == event.characters! {
-                    self.players![i][j].play()
+                if letter == string {
+                    return IndexPath(item: j, section: i)
                 }
             }
         }
+        return nil
     }
     
     func player(forFile file:String, ext:String) -> AVAudioPlayer? {
@@ -185,7 +201,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         collectionView.deselectItems(at: indexPaths)
-        self.players![indexPaths.first!.section][indexPaths.first!.item].play()
+        self.handle(LocalIndexPath: indexPaths.first!)
     }
 
 }

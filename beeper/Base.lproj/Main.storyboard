@@ -709,14 +709,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYU-qu-xpq">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYU-qu-xpq">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="213"/>
                                 <clipView key="contentView" id="Zne-Pu-VO2">
-                                    <rect key="frame" x="1" y="1" width="478" height="268"/>
+                                    <rect key="frame" x="1" y="1" width="478" height="211"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <collectionView id="ZOl-dT-vbk">
-                                            <rect key="frame" x="0.0" y="0.0" width="478" height="158"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="478" height="211"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="si2-Kb-13D">
                                                 <size key="itemSize" width="50" height="50"/>
@@ -730,24 +730,79 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="6LW-ut-RDK">
-                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <rect key="frame" x="-100" y="-100" width="233" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="ZEZ-Qm-C7h">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="ZEZ-Qm-C7h">
                                     <rect key="frame" x="234" y="1" width="15" height="143"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
+                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="6ut-h1-MVv">
+                                <rect key="frame" x="57" y="229" width="42" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="GuI-pj-mrE"/>
+                                    <constraint firstAttribute="width" constant="38" id="vgG-3f-UHN"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="serverStateChanged:" target="XfG-lQ-9wD" id="ghe-Hd-JUw"/>
+                                </connections>
+                            </switch>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Km8-ej-6UA">
+                                <rect key="frame" x="7" y="234" width="58" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Cn3-kn-7CW"/>
+                                    <constraint firstAttribute="width" constant="54" id="Urc-9S-Uw2"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Server?" id="UR2-J6-N5G">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="v2f-vh-3kG">
+                                <rect key="frame" x="117" y="234" width="42" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="TC0-3n-6VK"/>
+                                    <constraint firstAttribute="height" constant="16" id="eSN-eF-r4s"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Play?" id="pKm-Wo-uNT">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="1WQ-P9-JJ4">
+                                <rect key="frame" x="153" y="229" width="42" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="4cO-Vf-M3X"/>
+                                    <constraint firstAttribute="width" constant="38" id="rmH-KU-fbe"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="serverStateChanged:" target="XfG-lQ-9wD" id="ROL-wo-mKs"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="KYU-qu-xpq" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="7V6-pr-lCF"/>
+                            <constraint firstItem="6ut-h1-MVv" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="17" id="3vZ-eo-slp"/>
+                            <constraint firstItem="Km8-ej-6UA" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="9" id="Ifj-7C-Qtx"/>
+                            <constraint firstItem="v2f-vh-3kG" firstAttribute="leading" secondItem="6ut-h1-MVv" secondAttribute="trailing" constant="22" id="KBD-It-GYW"/>
+                            <constraint firstItem="1WQ-P9-JJ4" firstAttribute="leading" secondItem="6ut-h1-MVv" secondAttribute="trailing" constant="58" id="cTp-ET-8OL"/>
+                            <constraint firstItem="Km8-ej-6UA" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="djt-Tu-brY"/>
                             <constraint firstItem="KYU-qu-xpq" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="dvM-7j-Vck"/>
+                            <constraint firstItem="v2f-vh-3kG" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" symbolic="YES" id="ped-As-FAH"/>
                             <constraint firstAttribute="trailing" secondItem="KYU-qu-xpq" secondAttribute="trailing" id="qsS-Jl-eW2"/>
+                            <constraint firstItem="1WQ-P9-JJ4" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="17" id="t2F-22-YRh"/>
+                            <constraint firstItem="6ut-h1-MVv" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="59" id="teX-v8-AAk"/>
+                            <constraint firstItem="KYU-qu-xpq" firstAttribute="top" secondItem="6ut-h1-MVv" secondAttribute="bottom" constant="18" id="uie-vr-FZg"/>
                             <constraint firstAttribute="bottom" secondItem="KYU-qu-xpq" secondAttribute="bottom" id="vf1-84-ELw"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="ZOl-dT-vbk" id="H9z-t4-pSG"/>
+                        <outlet property="isServerSwitch" destination="6ut-h1-MVv" id="zMp-7z-LqW"/>
+                        <outlet property="playSwitch" destination="1WQ-P9-JJ4" id="cFf-2J-6ud"/>
+                        <outlet property="sendsBeepsSwitch" destination="6ut-h1-MVv" id="E69-Kn-bFQ"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
