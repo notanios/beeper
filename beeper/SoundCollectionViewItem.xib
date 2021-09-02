@@ -21,7 +21,7 @@
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-wV-pgc">
                     <rect key="frame" x="0.0" y="0.0" width="480" height="392"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="play" id="hj8-Ya-84i"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="hj8-Ya-84i"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
                     <rect key="frame" x="154" y="165" width="172" height="62"/>
@@ -47,7 +47,4 @@
             <point key="canvasLocation" x="152" y="42"/>
         </customView>
     </objects>
-    <resources>
-        <image name="play" width="392" height="392"/>
-    </resources>
 </document>

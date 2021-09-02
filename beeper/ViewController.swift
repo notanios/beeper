@@ -47,9 +47,13 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             case .connected:
                 self.connectButton.title = "Disconnect"
                 self.connectButton.isEnabled = true
+                self.isServerSwitch.state = .off
+                self.isServerSwitch.isEnabled = true
             case .disconnected:
                 self.connectButton.title = "Connect"
                 self.connectButton.isEnabled = true
+                self.isServerSwitch.state = .off
+                self.isServerSwitch.isEnabled = false
             case .inProcess:
                 self.connectButton.title = "Don't Touch"
                 self.connectButton.isEnabled = false
@@ -136,8 +140,10 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
 //    MARK: MQTT
     
     func received(Message message: String) {
-        if let indexPath = indexPath(ofLetter: message) {
-            self.handle(RemoteIndexPath: indexPath)
+        if self.isServerSwitch.state == .on {
+            if let indexPath = indexPath(ofLetter: message) {
+                self.handle(RemoteIndexPath: indexPath)
+            }
         }
     }
         
@@ -220,14 +226,23 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     }
     
     func handle(Event event: NSEvent) {
-        if let indexPath = indexPath(ofLetter: event.characters!) {
-            handle(LocalIndexPath: indexPath)
+        let command = event.characters!
+        
+        switch command {
+        case "m":
+            self.playSwitch.state = self.playSwitch.state == .off ? .on : .off
+        case "l":
+            self.isServerSwitch.state = self.isServerSwitch.state == .off ? .on : .off
+        default:
+            if let indexPath = indexPath(ofLetter: event.characters!) {
+                handle(LocalIndexPath: indexPath)
+            }
         }
     }
     
     func handle(LocalIndexPath indexPath: IndexPath) {
         if self.isServerSwitch.state == .off {
-//            self.mqtt!.publish("soundboard/play", withString: letters[indexPath.section][indexPath.item])
+            MQTTService.shared.publish(Message: letters[indexPath.section][indexPath.item], toChannel: nil)
         }
         
         if self.playSwitch.state == .on {

@@ -738,7 +738,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" baseWritingDirection="leftToRight" alignment="left" state="on" translatesAutoresizingMaskIntoConstraints="NO" id="6ut-h1-MVv">
+                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" enabled="NO" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="6ut-h1-MVv">
                                 <rect key="frame" x="57" y="229" width="42" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="GuI-pj-mrE"/>
@@ -754,7 +754,7 @@
                                     <constraint firstAttribute="height" constant="16" id="Cn3-kn-7CW"/>
                                     <constraint firstAttribute="width" constant="54" id="Urc-9S-Uw2"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Server?" id="UR2-J6-N5G">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Listen" id="UR2-J6-N5G">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -766,7 +766,7 @@
                                     <constraint firstAttribute="width" constant="38" id="TC0-3n-6VK"/>
                                     <constraint firstAttribute="height" constant="16" id="eSN-eF-r4s"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Play?" id="pKm-Wo-uNT">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Mute" id="pKm-Wo-uNT">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
