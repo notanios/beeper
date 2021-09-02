@@ -89,7 +89,7 @@
 		275A9397205A7942B52E2C9A29966F2A /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
 		35EC5A4F34A2C87867CE4E3D58CBDE88 /* Pods-beeper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeper-Info.plist"; sourceTree = "<group>"; };
 		4001BF26BED54B5D3AC75DE30CC13D6B /* Pods-beeper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeper-acknowledgements.plist"; sourceTree = "<group>"; };
-		47EADF5EB6323A4473AB247622688C44 /* Pods_beeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_beeperTests.framework; path = "Pods-beeperTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		47EADF5EB6323A4473AB247622688C44 /* Pods_beeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CEFC0430AC299632BA88CDA704253F /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
 		4B43E5579AD87C5296187ABB4FF00E14 /* Pods-beeper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-beeper-dummy.m"; sourceTree = "<group>"; };
 		4F3559BE2383BD4CCBD8E8D47EB4640A /* Pods-beeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeper.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		6A2E0EB9E7A86A0F0862EB6B0E333F60 /* Pods-beeper-beeperUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-beeper-beeperUITests-dummy.m"; sourceTree = "<group>"; };
 		6B9E3D4354EF279428153550140E0FDB /* CocoaMQTT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaMQTT-umbrella.h"; sourceTree = "<group>"; };
 		6BE60E8E8FA5381E406F70D979DC53B8 /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
-		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		777C3195823DA6E02C0D9C84359D5319 /* Pods-beeper-beeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeper-beeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E73D6F5C96A1AC8432CACB17FC2E936 /* Pods-beeper-beeperUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeper-beeperUITests-Info.plist"; sourceTree = "<group>"; };
 		8E326BB3AEAF07CCF16C68C7D4D13610 /* Pods-beeper-beeperUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-beeper-beeperUITests-frameworks.sh"; sourceTree = "<group>"; };
@@ -111,14 +111,14 @@
 		97163AA1BEF7D58AD5249A72FF7BBF56 /* CocoaMQTTFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaMQTTFrame.swift; path = Source/CocoaMQTTFrame.swift; sourceTree = "<group>"; };
 		9A003F998908A7364A77B5630ACDFFEB /* CocoaMQTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaMQTT.release.xcconfig; sourceTree = "<group>"; };
 		9BB5013D90AC94EAA765CC986F0FC3B6 /* Pods-beeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeper.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F0E218B24D989B20987EF6DDBD56B71 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
 		A15E2D49742A915A0494190E5B8F986D /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		A73B377AF91FEA42F3856C5F2DB7DFDA /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
 		AE83E033207DAE23FF1757BA891D1602 /* Pods-beeper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-beeper-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AED84E9ADF99D00A996FDA60F77221EF /* Pods-beeper-beeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeper-beeperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AFB992066B50760AE6C9C19FA2900827 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B30CFB9DCDED9DEC454F9B37F8513980 /* Pods_beeper_beeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_beeper_beeperUITests.framework; path = "Pods-beeper-beeperUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30CFB9DCDED9DEC454F9B37F8513980 /* Pods_beeper_beeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeper_beeperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78543FB04AAC679BC6C922A06A43515 /* CocoaMQTT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaMQTT.modulemap; sourceTree = "<group>"; };
 		B8B0A32DE7A00FE05869722159F14FE0 /* Pods-beeperTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-beeperTests-umbrella.h"; sourceTree = "<group>"; };
 		B95129F3CFA9D9A6CBD63D4EE797EAE5 /* Pods-beeperTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-beeperTests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -130,10 +130,10 @@
 		C74D83398AD00FD6D4FB2B2EA23A2450 /* CocoaMQTT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaMQTT.h; path = Source/CocoaMQTT.h; sourceTree = "<group>"; };
 		D012EF7D7567D5233F68DD441A997F5D /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		D2B264E2BEB759985AEEC5858024233C /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
-		D77FF246FC5CA04A17911E6DC3D01F0C /* Pods_beeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_beeper.framework; path = "Pods-beeper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D77FF246FC5CA04A17911E6DC3D01F0C /* Pods_beeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E26FC2B8241BE9D7EAD3BDE92FCEEF4D /* CocoaMQTT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaMQTT-dummy.m"; sourceTree = "<group>"; };
 		E6A111E1AD75070A28B7E3DEA0E230DC /* CocoaMQTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaMQTT.debug.xcconfig; sourceTree = "<group>"; };
-		E6A4E1627379D6540B81A470C575D716 /* CocoaMQTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaMQTT.framework; path = CocoaMQTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6A4E1627379D6540B81A470C575D716 /* CocoaMQTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaMQTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEDE4D7C4321ECC3807EC0C958DB920 /* Pods-beeperTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeperTests-Info.plist"; sourceTree = "<group>"; };
 		F1153D6CF556F8062F9247E7D479D7D9 /* Pods-beeperTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeperTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FA9B7854868B5A6308EA6A774AF252D4 /* Pods-beeper-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-beeper-frameworks.sh"; sourceTree = "<group>"; };
@@ -259,7 +259,6 @@
 				A15E2D49742A915A0494190E5B8F986D /* GCDAsyncUdpSocket.m */,
 				C42CEB9515A03FBCEEBCA22DA81DD045 /* Support Files */,
 			);
-			name = CocoaAsyncSocket;
 			path = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
@@ -334,7 +333,6 @@
 				C054FE5E96C2E9ADEF9D7B94DCE6D9BA /* CocoaMQTTMessage.swift */,
 				1611BA2A2BC840087FBF3805FBE12BD4 /* Support Files */,
 			);
-			name = CocoaMQTT;
 			path = CocoaMQTT;
 			sourceTree = "<group>";
 		};
@@ -507,7 +505,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1250;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 11.4";
@@ -661,7 +659,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9A003F998908A7364A77B5630ACDFFEB /* CocoaMQTT.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -763,7 +760,6 @@
 			baseConfigurationReference = 4F3559BE2383BD4CCBD8E8D47EB4640A /* Pods-beeper.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -799,7 +795,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB5843F857728CB124B65F5465368814 /* CocoaAsyncSocket.release.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -835,7 +830,6 @@
 			baseConfigurationReference = 94710E85E5B02599A508761992CF482B /* Pods-beeperTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -872,7 +866,6 @@
 			baseConfigurationReference = AED84E9ADF99D00A996FDA60F77221EF /* Pods-beeper-beeperUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -908,7 +901,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6BE60E8E8FA5381E406F70D979DC53B8 /* CocoaAsyncSocket.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -944,7 +936,6 @@
 			baseConfigurationReference = 777C3195823DA6E02C0D9C84359D5319 /* Pods-beeper-beeperUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1043,7 +1034,6 @@
 			baseConfigurationReference = 929A2AAD4F191F15AABA96E827BE22EC /* Pods-beeperTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1080,7 +1070,6 @@
 			baseConfigurationReference = 9BB5013D90AC94EAA765CC986F0FC3B6 /* Pods-beeper.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1116,7 +1105,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6A111E1AD75070A28B7E3DEA0E230DC /* CocoaMQTT.debug.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";

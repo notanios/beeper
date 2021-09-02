@@ -9,6 +9,24 @@ import Cocoa
 import AVFoundation
 import CocoaMQTT
 
+let usernameKey = "usernamekey"
+let passwordKey = "passwordkey"
+let hostKey = "hostkey"
+let portKey = "portkey"
+
+struct Connection {
+    let username: String
+    let password: String
+    let host: String
+    let port: UInt16
+}
+
+enum ConnStatus: String {
+    case connected = "⚡Connected"
+    case disconnected = "🚧Disconnected"
+    case inProcess = "⏳In process"
+}
+
 let letters = [["1", "2", "3", "4", "5"],
                ["q", "w", "e", "r", "t"],
                ["a", "s", "d", "f", "g"],
@@ -16,13 +34,35 @@ let letters = [["1", "2", "3", "4", "5"],
 
 let sounds = ["beep", "bell", "badumtss", "coin", "chirp"]
 
-class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, CocoaMQTTDelegate {
+class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, MQTTCommunicationDelegate, MQTTCOnnectionDelegate {
     
+    var tempConnection: Connection?
+    var timer: Timer?
+    var monitor: Any?
+    var status: ConnStatus = .disconnected {
+        didSet {
+            self.statusLabel.stringValue = status.rawValue
+            
+            switch status {
+            case .connected:
+                self.connectButton.title = "Disconnect"
+                self.connectButton.isEnabled = true
+            case .disconnected:
+                self.connectButton.title = "Connect"
+                self.connectButton.isEnabled = true
+            case .inProcess:
+                self.connectButton.title = "Don't Touch"
+                self.connectButton.isEnabled = false
+            }
+        }
+    }
+    
+    @IBOutlet weak var connectButton: NSButton!
+    @IBOutlet weak var statusLabel: NSTextField!
     @IBOutlet weak var isServerSwitch: NSSwitch!
     @IBOutlet weak var playSwitch: NSSwitch!
     @IBOutlet weak var collectionView: NSCollectionView!
     var players: [[AVAudioPlayer]]?
-    var mqtt:CocoaMQTT?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,76 +88,135 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     override func viewDidAppear() {
         super.viewDidAppear()
         
-        if self.view.acceptsFirstResponder {
-            self.view.window!.makeFirstResponder(self)
-        }
-        
-        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+        self.enableKeyMonitor()
+    }
+    
+    func enableKeyMonitor() {
+        self.monitor = NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
             self.handle(Event: event)
             return nil
         }
-        
-        self.setupMQTT()
     }
     
-//    MARK: IB Actions
-    
-//    MARK: MQTT
-    
-    func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topic: String) {
-        print("📯 subscride topic: \(topic)")
+    func disableKeyMonitor() {
+        NSEvent.removeMonitor(self.monitor!)
+        self.monitor = nil
     }
     
-    func mqtt(_ mqtt: CocoaMQTT, didUnsubscribeTopic topic: String) {
-        print("❌ Did unsubscribe topic: \(topic)")
-    }
+//    MARK: Segues
     
-    func mqtt(_ mqtt: CocoaMQTT, didPublishAck id: UInt16) {
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didPublishMessage message: CocoaMQTTMessage, id: UInt16) {
-        print("📤 published message: \(message.topic), \(message.string!)")
-    }
-    
-    func mqtt(_ mqtt: CocoaMQTT, didReceiveMessage message: CocoaMQTTMessage, id: UInt16) {
-        print("💬 Did receive message: \(message.string!)")
-        if let indexPath = indexPath(ofLetter: message.string!) {
-            self.handle(RemoteIndexPath: indexPath)
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if self.status == .connected {
+            MQTTService.shared.disconnect()
+        } else {
+            self.disableKeyMonitor()
+            
+            let connect = segue.destinationController as! ConnectionViewController
+            
+            connect.connHandler = { connection in
+                self.enableKeyMonitor()
+                self.status = .inProcess
+                _ = self.connect(withConnection: connection)
+            }
         }
     }
     
-    func mqtt(_ mqtt: CocoaMQTT, didSubscribeTopic topics: [String]) {
-        print("📯 Did subscribe topic: \(topics)")
+    override func shouldPerformSegue(withIdentifier identifier: NSStoryboardSegue.Identifier, sender: Any?) -> Bool {
+        if self.status == .connected {
+            self.disconnect()
+            return false
+        } else if let connection = self.extractConnection() {
+            _ = self.connect(withConnection: connection)
+            return false
+        } else {
+            return true
+        }
     }
     
-    func mqttDidPing(_ mqtt: CocoaMQTT) {
+//    MARK: MQTT
+    
+    func received(Message message: String) {
+        if let indexPath = indexPath(ofLetter: message) {
+            self.handle(RemoteIndexPath: indexPath)
+        }
+    }
+        
+    func didConnect() {
+        self.save(Connection: self.tempConnection!)
+        self.tempConnection = nil
+        self.status = .connected
     }
     
-    func mqttDidReceivePong(_ mqtt: CocoaMQTT) {
+    func didDisconnect() {
+        self.status = .disconnected
     }
     
-    func mqttDidDisconnect(_ mqtt: CocoaMQTT, withError err: Error?) {
-        print("🚫 disconnect")
-        self.mqtt?.unsubscribe("soundboard/play")
+//    MARK: Saving Connection
+    
+    func save(Connection connection: Connection) -> Void {
+        UserDefaults.standard.register(defaults: [hostKey: connection.host])
+        UserDefaults.standard.register(defaults: [portKey: connection.port])
+        UserDefaults.standard.register(defaults: [usernameKey: connection.username])
+        UserDefaults.standard.register(defaults: [passwordKey: connection.password])
     }
     
-    func mqtt(_ mqtt: CocoaMQTT, didConnectAck ack: CocoaMQTTConnAck) {
-        print("👌 connect")
-        self.mqtt?.subscribe("soundboard/play")
+    func eraseConnectionData() -> Void {
+        UserDefaults.resetStandardUserDefaults()
+    }
+    
+    func extractConnection() -> Connection? {
+        let username = UserDefaults.standard.value(forKey: usernameKey) as! String?
+        if username == nil {
+            return nil
+        }
+        
+        let password = UserDefaults.standard.value(forKey: passwordKey) as! String?
+        if password == nil {
+            return nil
+        }
+        
+        let host = UserDefaults.standard.value(forKey: hostKey) as! String?
+        if host == nil {
+            return nil
+        }
+        
+        let port = UserDefaults.standard.value(forKey: portKey) as! UInt16?
+        if port == nil {
+            return nil
+        }
+        
+        return Connection(username: username!, password: password!, host: host!, port: port!)
     }
     
 //    MARK: Custom
     
-    func setupMQTT() {
-        let clientID = "CocoaMQTT" + String(ProcessInfo().processIdentifier)
-        self.mqtt = CocoaMQTT(clientID: clientID, host: "40.68.246.153", port: 1883)
-        self.mqtt!.username = "vlad"
-        self.mqtt!.password = "password123"
-        self.mqtt!.willMessage = CocoaMQTTWill(topic: "/will", message: "dieout")
-        self.mqtt!.keepAlive = 60
-        self.mqtt!.allowUntrustCACertificate = true
-        self.mqtt!.delegate = self
-        _ = self.mqtt!.connect()
+    func disconnect() {
+        MQTTService.shared.disconnect()
+    }
+    
+    func connect(withConnection connection: Connection) -> Bool {
+        if connection.port < 1 {
+            return false
+        }
+        
+        if connection.host.isEmpty {
+            return false
+        }
+        
+        if connection.password.isEmpty {
+            return false
+        }
+        
+        if connection.username.isEmpty {
+            return false
+        }
+        
+        MQTTService.shared.connectionDelegate = self
+        MQTTService.shared.communicationDelegate = self
+        MQTTService.shared.connect(toServer: connection.host, withPort: connection.port, username: connection.username, andPassword: connection.password)
+        self.tempConnection = connection
+        
+        return true
     }
     
     func handle(Event event: NSEvent) {
@@ -128,7 +227,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func handle(LocalIndexPath indexPath: IndexPath) {
         if self.isServerSwitch.state == .off {
-            self.mqtt!.publish("soundboard/play", withString: letters[indexPath.section][indexPath.item])
+//            self.mqtt!.publish("soundboard/play", withString: letters[indexPath.section][indexPath.item])
         }
         
         if self.playSwitch.state == .on {

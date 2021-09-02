@@ -10,6 +10,8 @@
 		155DEC0725B9B6FB1889A2C0 /* Pods_beeperTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4581FDD9A155A037D64A63D0 /* Pods_beeperTests.framework */; };
 		4F62360B1B6D6D0717219E6E /* Pods_beeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604F00C6A4FED32373514448 /* Pods_beeper.framework */; };
 		F15A98E573AD7C3F2D9FE9BA /* Pods_beeper_beeperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1F01AC5AE1AE1403F11D4B /* Pods_beeper_beeperUITests.framework */; };
+		F50DA55F26E0CB76001856B2 /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA55E26E0CB76001856B2 /* Additions.swift */; };
+		F50DA56126E0CBFB001856B2 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA56026E0CBFB001856B2 /* Transitions.swift */; };
 		F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */; };
 		F53BCC2126CC04C900E19E41 /* SoundCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */; };
 		F53BCC2326CC05EC00E19E41 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC2226CC05EC00E19E41 /* play.png */; };
@@ -24,6 +26,8 @@
 		F5A7D5D326CC0F8A00DBB253 /* coin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A7D5CE26CC0F8A00DBB253 /* coin.mp3 */; };
 		F5A7D5D426CC0F8A00DBB253 /* badumtss.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A7D5CF26CC0F8A00DBB253 /* badumtss.mp3 */; };
 		F5A7D5D526CC0F8A00DBB253 /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5A7D5D026CC0F8A00DBB253 /* beep.mp3 */; };
+		F5B75F8226DFC0FD0061009A /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B75F8026DFC0FD0061009A /* ConnectionViewController.swift */; };
+		F5B75F8526DFC65B0061009A /* MQTTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B75F8426DFC65B0061009A /* MQTTService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,8 @@
 		D0D23E3946F3A8BF81454CAB /* Pods-beeper-beeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeper-beeperUITests.debug.xcconfig"; path = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE1F01AC5AE1AE1403F11D4B /* Pods_beeper_beeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeper_beeperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E36536D6B9E5F7F2A0D401 /* Pods-beeper-beeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeper-beeperUITests.release.xcconfig"; path = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F50DA55E26E0CB76001856B2 /* Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
+		F50DA56026E0CBFB001856B2 /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCollectionViewItem.swift; sourceTree = "<group>"; };
 		F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundCollectionViewItem.xib; sourceTree = "<group>"; };
 		F53BCC2226CC05EC00E19E41 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -74,6 +80,8 @@
 		F5A7D5CE26CC0F8A00DBB253 /* coin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = coin.mp3; sourceTree = "<group>"; };
 		F5A7D5CF26CC0F8A00DBB253 /* badumtss.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = badumtss.mp3; sourceTree = "<group>"; };
 		F5A7D5D026CC0F8A00DBB253 /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
+		F5B75F8026DFC0FD0061009A /* ConnectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
+		F5B75F8426DFC65B0061009A /* MQTTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,10 +161,13 @@
 		F5A3571D26CBFE9000B0C6FE /* beeper */ = {
 			isa = PBXGroup;
 			children = (
+				F5B75F8626DFC6880061009A /* Services */,
 				F5A3571E26CBFE9000B0C6FE /* AppDelegate.swift */,
+				F50DA55E26E0CB76001856B2 /* Additions.swift */,
 				F5A3572026CBFE9000B0C6FE /* ViewController.swift */,
 				F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */,
 				F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */,
+				F5B75F8026DFC0FD0061009A /* ConnectionViewController.swift */,
 				F5A3572226CBFE9000B0C6FE /* Assets.xcassets */,
 				F5A3572426CBFE9000B0C6FE /* Main.storyboard */,
 				F5A3572726CBFE9000B0C6FE /* Info.plist */,
@@ -194,6 +205,15 @@
 				F53BCC2226CC05EC00E19E41 /* play.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F5B75F8626DFC6880061009A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F5B75F8426DFC65B0061009A /* MQTTService.swift */,
+				F50DA56026E0CBFB001856B2 /* Transitions.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,7 +479,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F50DA55F26E0CB76001856B2 /* Additions.swift in Sources */,
+				F5B75F8226DFC0FD0061009A /* ConnectionViewController.swift in Sources */,
+				F50DA56126E0CBFB001856B2 /* Transitions.swift in Sources */,
 				F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */,
+				F5B75F8526DFC65B0061009A /* MQTTService.swift in Sources */,
 				F5A3572126CBFE9000B0C6FE /* ViewController.swift in Sources */,
 				F5A3571F26CBFE9000B0C6FE /* AppDelegate.swift in Sources */,
 			);
