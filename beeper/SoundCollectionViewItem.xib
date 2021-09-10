@@ -7,44 +7,63 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SoundCollectionViewItem" customModule="beeper" customModuleProvider="target">
             <connections>
+                <outlet property="descLabel" destination="IC6-oH-hlF" id="bwS-hj-kmm"/>
                 <outlet property="imageLabel" destination="A9J-wV-pgc" id="EMR-x3-S4z"/>
                 <outlet property="imageView" destination="A9J-wV-pgc" id="ave-vh-95I"/>
-                <outlet property="titleLabel" destination="J4W-Bd-Lib" id="P2J-3N-3gT"/>
+                <outlet property="titleLabel" destination="J4W-Bd-Lib" id="ihM-VT-42g"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="392"/>
+            <rect key="frame" x="0.0" y="0.0" width="140" height="120"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-wV-pgc">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="392"/>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="hj8-Ya-84i"/>
-                </imageView>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
-                    <rect key="frame" x="154" y="165" width="172" height="62"/>
+                    <rect key="frame" x="27" y="11" width="87.5" height="86"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="62" id="ES2-2S-mt9"/>
-                        <constraint firstAttribute="width" constant="168" id="lMw-Qs-x4n"/>
+                        <constraint firstAttribute="height" constant="82" id="LvT-9O-YPw"/>
+                        <constraint firstAttribute="width" constant="87" id="rt1-gM-fCM"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSTouchBarPlayTemplate" id="hj8-Ya-84i"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IC6-oH-hlF">
+                    <rect key="frame" x="-2" y="84" width="144" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="DNn-Nu-VUJ"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="title" id="BuZ-tK-pT8">
+                        <font key="font" metaFont="system" size="21"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
+                    <rect key="frame" x="18" y="32" width="104" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="V3l-0N-0Fe"/>
+                        <constraint firstAttribute="width" constant="100" id="srE-Gz-U7c"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="key" id="xVj-Fc-x1s">
-                        <font key="font" metaFont="system" size="43"/>
+                        <font key="font" size="32" name="HelveticaNeue"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
             </subviews>
             <constraints>
-                <constraint firstItem="J4W-Bd-Lib" firstAttribute="centerY" secondItem="Hz6-mo-xeY" secondAttribute="centerY" id="O59-qt-wLX"/>
-                <constraint firstItem="A9J-wV-pgc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="ZIH-2N-CHt"/>
-                <constraint firstItem="J4W-Bd-Lib" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="hqr-7z-w0D"/>
-                <constraint firstAttribute="bottom" secondItem="A9J-wV-pgc" secondAttribute="bottom" id="op1-Re-kMw"/>
-                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="r2P-LP-KXw"/>
-                <constraint firstAttribute="trailing" secondItem="A9J-wV-pgc" secondAttribute="trailing" id="uLc-8i-Qps"/>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="04l-ZI-1lg"/>
+                <constraint firstItem="IC6-oH-hlF" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="3" id="DYb-s8-7rx"/>
+                <constraint firstAttribute="trailing" secondItem="IC6-oH-hlF" secondAttribute="trailing" id="GB3-3j-2Wo"/>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="25" id="MPh-lD-nEQ"/>
+                <constraint firstItem="J4W-Bd-Lib" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Nly-di-2hb"/>
+                <constraint firstItem="IC6-oH-hlF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Nq0-RI-GOP"/>
             </constraints>
-            <point key="canvasLocation" x="152" y="42"/>
+            <point key="canvasLocation" x="184" y="134"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSTouchBarPlayTemplate" width="12" height="13"/>
+    </resources>
 </document>

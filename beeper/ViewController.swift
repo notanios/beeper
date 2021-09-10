@@ -27,12 +27,12 @@ enum ConnStatus: String {
     case inProcess = "⏳In process"
 }
 
-let letters = [["1", "2", "3", "4", "5"],
-               ["q", "w", "e", "r", "t"],
-               ["a", "s", "d", "f", "g"],
-               ["z", "x", "c", "v", "b"]]
+let letters = [["1", "2", "3", "4"],
+               ["q", "w", "e", "r"]]
+let titles = [["badumtss", "coin", "applause", "cricket"],
+               ["drumroll", "gong", "sadtrombone", "cowsay"]]
 
-let sounds = ["beep", "bell", "badumtss", "coin", "chirp"]
+let sounds = ["badumtss", "coin", "applause", "cricket", "drumroll", "gong", "sadtrombone", "cowsay"]
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, MQTTCommunicationDelegate, MQTTCOnnectionDelegate {
     
@@ -76,13 +76,14 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         collectionView.register(SoundCollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier("SoundCollectionViewItem"))
         
         let flowLayout = NSCollectionViewFlowLayout()
-            flowLayout.itemSize = NSSize(width: 100.0, height: 100.0)
-        flowLayout.sectionInset = NSEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
-            flowLayout.minimumInteritemSpacing = 10.0
-            flowLayout.minimumLineSpacing = 10.0
-            collectionView.collectionViewLayout = flowLayout
-            view.wantsLayer = true
-            collectionView.layer?.backgroundColor = NSColor.systemPink.cgColor
+        flowLayout.itemSize = NSSize(width: 140.0, height: 120.0)
+        flowLayout.sectionInset = NSEdgeInsets(top: 15.0, left: 0.0, bottom: 0.0, right: 0.0)
+        flowLayout.minimumInteritemSpacing = 10.0
+        flowLayout.minimumLineSpacing = 5.0
+        
+        collectionView.collectionViewLayout = flowLayout
+        view.wantsLayer = true
+        collectionView.layer?.backgroundColor = NSColor.systemPink.cgColor
         
         collectionView.isSelectable = true
         
@@ -284,10 +285,10 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func initiatePlayers() {
         self.players = []
-        for i in 0...3 {
+        for i in 0...1 {
             self.players?.append([])
-            for j in 0...4 {
-                let soundName = sounds[j]
+            for j in 0...3 {
+                let soundName = titles[i][j]
                 self.players![i].append(player(forFile: soundName, ext: "mp3")!)
             }
         }
@@ -296,11 +297,11 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
 //    MARK: CollectionView delegates
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
-        return 4
+        return 2
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
@@ -308,8 +309,9 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         let item = self.collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "SoundCollectionViewItem"), for: indexPath) as! SoundCollectionViewItem
         
         let keyString = letters[indexPath.section][indexPath.item]
+        let desc = titles[indexPath.section][indexPath.item]
         
-        item.representedObject = SoundItem(imageName: "nil", keyStrokeName: keyString)
+        item.representedObject = SoundItem(imageName: "nil", keyStrokeName: keyString, desc: desc)
         return item
     }
     

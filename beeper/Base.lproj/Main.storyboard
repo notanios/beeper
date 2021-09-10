@@ -719,9 +719,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="478" height="211"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="si2-Kb-13D">
-                                                <size key="itemSize" width="50" height="50"/>
+                                                <size key="itemSize" width="140" height="120"/>
                                             </collectionViewFlowLayout>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="secondaryBackgroundColor" name="controlAlternatingRowColor" catalog="System" colorSpace="catalog"/>
                                             <connections>
                                                 <outlet property="dataSource" destination="XfG-lQ-9wD" id="aBF-Fr-7qr"/>
                                                 <outlet property="delegate" destination="XfG-lQ-9wD" id="s1Y-c6-ZWJ"/>
@@ -803,7 +804,7 @@
                                     <constraint firstAttribute="height" constant="20" id="SkQ-Fy-hP0"/>
                                 </constraints>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="🚧Disconnected" id="rc0-FH-F6C">
-                                    <font key="font" size="13" name=".AppleColorEmojiUI"/>
+                                    <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>

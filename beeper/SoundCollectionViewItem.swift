@@ -10,11 +10,13 @@ import Cocoa
 struct SoundItem {
     let imageName: String
     let keyStrokeName: String
+    let desc: String
 }
 
 class SoundCollectionViewItem: NSCollectionViewItem {
     @IBOutlet weak var imageLabel: NSImageView!
     @IBOutlet weak var titleLabel: NSTextField!
+    @IBOutlet weak var descLabel: NSTextField!
     var item: SoundItem?
     
     override func viewDidLoad() {
@@ -23,12 +25,22 @@ class SoundCollectionViewItem: NSCollectionViewItem {
         view.layer?.backgroundColor = NSColor.systemPink.cgColor
     }
     
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        if let object = (self.representedObject as! SoundItem?) {
+            self.descLabel.stringValue = object.desc
+            self.titleLabel.stringValue = object.keyStrokeName
+        }
+    }
+    
     override var representedObject: Any? {
         didSet {
             if let obj = (representedObject as! SoundItem?) {
                 self.item = obj
 //                self.imageLabel.image = NSImage(contentsOf: URL())
                 self.titleLabel.stringValue = self.item!.keyStrokeName
+                self.descLabel.stringValue = self.item!.desc
             } else {
                 print("Anyway...")
             }
