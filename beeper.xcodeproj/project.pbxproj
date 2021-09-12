@@ -11,10 +11,12 @@
 		4F62360B1B6D6D0717219E6E /* Pods_beeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604F00C6A4FED32373514448 /* Pods_beeper.framework */; };
 		F15A98E573AD7C3F2D9FE9BA /* Pods_beeper_beeperUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1F01AC5AE1AE1403F11D4B /* Pods_beeper_beeperUITests.framework */; };
 		F50DA56126E0CBFB001856B2 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA56026E0CBFB001856B2 /* Transitions.swift */; };
+		F52E5C1126EE85160090411D /* applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F52E5C0E26EE85160090411D /* applause.mp3 */; };
+		F52E5C1226EE85160090411D /* booing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F52E5C0F26EE85160090411D /* booing.mp3 */; };
+		F52E5C1326EE85160090411D /* cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F52E5C1026EE85160090411D /* cheering.mp3 */; };
 		F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */; };
 		F53BCC2126CC04C900E19E41 /* SoundCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */; };
 		F53BCC2326CC05EC00E19E41 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC2226CC05EC00E19E41 /* play.png */; };
-		F5962D2426E140AA00C7D500 /* applause.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5962D1D26E140AA00C7D500 /* applause.mp3 */; };
 		F5962D2526E140AA00C7D500 /* cricket.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5962D1E26E140AA00C7D500 /* cricket.mp3 */; };
 		F5962D2926E140AA00C7D500 /* cowsay.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5962D2226E140AA00C7D500 /* cowsay.mp3 */; };
 		F5962D2E26E144C400C7D500 /* sadtrombone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F5962D2B26E144C400C7D500 /* sadtrombone.mp3 */; };
@@ -60,10 +62,12 @@
 		DE1F01AC5AE1AE1403F11D4B /* Pods_beeper_beeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeper_beeperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E36536D6B9E5F7F2A0D401 /* Pods-beeper-beeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-beeper-beeperUITests.release.xcconfig"; path = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F50DA56026E0CBFB001856B2 /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
+		F52E5C0E26EE85160090411D /* applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = applause.mp3; path = "../../../Downloads/files (online-audio-converter/applause.mp3"; sourceTree = "<group>"; };
+		F52E5C0F26EE85160090411D /* booing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = booing.mp3; sourceTree = "<group>"; };
+		F52E5C1026EE85160090411D /* cheering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cheering.mp3; sourceTree = "<group>"; };
 		F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCollectionViewItem.swift; sourceTree = "<group>"; };
 		F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundCollectionViewItem.xib; sourceTree = "<group>"; };
 		F53BCC2226CC05EC00E19E41 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
-		F5962D1D26E140AA00C7D500 /* applause.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = applause.mp3; sourceTree = "<group>"; };
 		F5962D1E26E140AA00C7D500 /* cricket.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cricket.mp3; sourceTree = "<group>"; };
 		F5962D2226E140AA00C7D500 /* cowsay.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cowsay.mp3; sourceTree = "<group>"; };
 		F5962D2B26E144C400C7D500 /* sadtrombone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sadtrombone.mp3; sourceTree = "<group>"; };
@@ -204,7 +208,9 @@
 				F5962D3126E144D200C7D500 /* gong.mp3 */,
 				F5962D2D26E144C400C7D500 /* drumroll.mp3 */,
 				F5962D2B26E144C400C7D500 /* sadtrombone.mp3 */,
-				F5962D1D26E140AA00C7D500 /* applause.mp3 */,
+				F52E5C0E26EE85160090411D /* applause.mp3 */,
+				F52E5C0F26EE85160090411D /* booing.mp3 */,
+				F52E5C1026EE85160090411D /* cheering.mp3 */,
 				F5962D1E26E140AA00C7D500 /* cricket.mp3 */,
 				F5962D2226E140AA00C7D500 /* cowsay.mp3 */,
 				F5A7D5CE26CC0F8A00DBB253 /* coin.mp3 */,
@@ -333,13 +339,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5A3572326CBFE9000B0C6FE /* Assets.xcassets in Resources */,
+				F52E5C1126EE85160090411D /* applause.mp3 in Resources */,
 				F5962D2E26E144C400C7D500 /* sadtrombone.mp3 in Resources */,
+				F52E5C1326EE85160090411D /* cheering.mp3 in Resources */,
+				F52E5C1226EE85160090411D /* booing.mp3 in Resources */,
 				F5A7D5D326CC0F8A00DBB253 /* coin.mp3 in Resources */,
 				F53BCC2126CC04C900E19E41 /* SoundCollectionViewItem.xib in Resources */,
 				F5962D2926E140AA00C7D500 /* cowsay.mp3 in Resources */,
 				F5962D3226E144D200C7D500 /* gong.mp3 in Resources */,
 				F5962D3026E144C400C7D500 /* drumroll.mp3 in Resources */,
-				F5962D2426E140AA00C7D500 /* applause.mp3 in Resources */,
 				F5962D2F26E144C400C7D500 /* badumtss.mp3 in Resources */,
 				F5A3572626CBFE9000B0C6FE /* Main.storyboard in Resources */,
 				F53BCC2326CC05EC00E19E41 /* play.png in Resources */,

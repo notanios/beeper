@@ -33,11 +33,6 @@ let letters = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
                ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
                ["z", "x", "c", "v", "b", "n", "m"]]
 
-let soundMap = [["coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "0"],
-                ["coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin"],
-                ["coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin"],
-                ["coin", "coin", "coin", "coin", "coin", "coin", "coin"]]
-
 struct Sound: Codable {
     let title: String
     let key: String
@@ -51,7 +46,9 @@ let sounds = [Sound(title: "badumtss", key: "1"),
               Sound(title: "drumroll", key: "q"),
               Sound(title: "gong", key: "w"),
               Sound(title: "sadtrombone", key: "e"),
-              Sound(title: "cowsay", key: "r")]
+              Sound(title: "cowsay", key: "r"),
+              Sound(title: "booing", key: "a"),
+              Sound(title: "cheering", key: "s")]
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, MQTTCommunicationDelegate, MQTTCOnnectionDelegate {
     
