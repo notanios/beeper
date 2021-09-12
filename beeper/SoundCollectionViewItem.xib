@@ -32,8 +32,16 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-wV-pgc">
+                    <rect key="frame" x="15" y="0.0" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Tpg-wc-zRU"/>
+                        <constraint firstAttribute="width" constant="50" id="ZlK-tg-bKg"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="hj8-Ya-84i"/>
+                </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
-                    <rect key="frame" x="-2" y="-1" width="84" height="37"/>
+                    <rect key="frame" x="-2" y="6" width="84" height="37"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="37" id="5nB-03-u5H"/>
                     </constraints>
@@ -43,22 +51,14 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-wV-pgc">
-                    <rect key="frame" x="15" y="-11" width="50" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="50" id="Tpg-wc-zRU"/>
-                        <constraint firstAttribute="width" constant="50" id="ZlK-tg-bKg"/>
-                    </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="hj8-Ya-84i"/>
-                </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="IC6-oH-hlF" secondAttribute="bottom" constant="5" id="0fh-0a-lfw"/>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="IC6-oH-hlF" secondAttribute="bottom" constant="-6" id="0fh-0a-lfw"/>
                 <constraint firstAttribute="trailing" secondItem="J4W-Bd-Lib" secondAttribute="trailing" id="6bw-D0-eyq"/>
                 <constraint firstItem="IC6-oH-hlF" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="3" id="DYb-s8-7rx"/>
                 <constraint firstAttribute="trailing" secondItem="IC6-oH-hlF" secondAttribute="trailing" id="GB3-3j-2Wo"/>
                 <constraint firstItem="A9J-wV-pgc" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="H4m-dh-0I6"/>
-                <constraint firstItem="J4W-Bd-Lib" firstAttribute="top" secondItem="IC6-oH-hlF" secondAttribute="bottom" constant="8" symbolic="YES" id="KQg-aT-wTk"/>
+                <constraint firstItem="J4W-Bd-Lib" firstAttribute="top" secondItem="IC6-oH-hlF" secondAttribute="bottom" constant="1" id="KQg-aT-wTk"/>
                 <constraint firstItem="IC6-oH-hlF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Nq0-RI-GOP"/>
                 <constraint firstItem="J4W-Bd-Lib" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="dhG-aN-9os"/>
             </constraints>

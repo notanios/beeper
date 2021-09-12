@@ -274,13 +274,17 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             MQTTService.shared.publish(Message: letters[indexPath.section][indexPath.item], toChannel: nil)
         }
         
-        if self.playSwitch.state == .on && thereIsSoundAttached(indexPath) {
+        if self.playSwitch.state == .on, thereIsSoundAttached(indexPath) {
+            self.players![indexPath.section][indexPath.item]!.stop()
+            self.players![indexPath.section][indexPath.item]!.currentTime = 0.0
             self.players![indexPath.section][indexPath.item]!.play()
         }
     }
     
     func handle(RemoteIndexPath indexPath: IndexPath) {
         if self.isServerSwitch.state == .on, self.playSwitch.state == .on {
+            self.players![indexPath.section][indexPath.item]!.stop()
+            self.players![indexPath.section][indexPath.item]!.currentTime = 0.0
             self.players![indexPath.section][indexPath.item]!.play()
         }
     }
