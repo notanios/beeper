@@ -8,9 +8,9 @@
 import Cocoa
 
 struct SoundItem {
-    let imageName: String
+    let imageName: String?
     let keyStrokeName: String
-    let desc: String
+    let desc: String?
 }
 
 class SoundCollectionViewItem: NSCollectionViewItem {
@@ -29,7 +29,8 @@ class SoundCollectionViewItem: NSCollectionViewItem {
         super.viewDidAppear()
         
         if let object = (self.representedObject as! SoundItem?) {
-            self.descLabel.stringValue = object.desc
+            self.imageLabel.image = NSImage(named: object.imageName ?? "")
+            self.descLabel.stringValue = object.desc ?? "<no sound>"
             self.titleLabel.stringValue = object.keyStrokeName
         }
     }
@@ -38,9 +39,9 @@ class SoundCollectionViewItem: NSCollectionViewItem {
         didSet {
             if let obj = (representedObject as! SoundItem?) {
                 self.item = obj
-//                self.imageLabel.image = NSImage(contentsOf: URL())
+                self.imageLabel.image = NSImage(named: self.item!.imageName ?? "")
                 self.titleLabel.stringValue = self.item!.keyStrokeName
-                self.descLabel.stringValue = self.item!.desc
+                self.descLabel.stringValue = self.item!.desc ?? "<no sound>"
             } else {
                 print("Anyway...")
             }

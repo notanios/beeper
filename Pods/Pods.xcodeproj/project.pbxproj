@@ -7,146 +7,181 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		119C71E8D1752E44F362185B8495D988 /* Pods-beeper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43E5579AD87C5296187ABB4FF00E14 /* Pods-beeper-dummy.m */; };
-		190FE6162F15F5217B2944E6944E1E91 /* CocoaMQTTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C054FE5E96C2E9ADEF9D7B94DCE6D9BA /* CocoaMQTTMessage.swift */; };
-		1C7C608091334B29AA1F96D400B24326 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = D012EF7D7567D5233F68DD441A997F5D /* GCDAsyncSocket.m */; };
-		216F48F74FFBD6D34E1FE0581CE9A38F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */; };
+		12A96E50A3E5788CA3CD2C05976E1044 /* Pods-beeper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D30C8364025F449469C1EEF92BC1BA /* Pods-beeper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		17CFB000F339FD08A48945136E50B861 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */; };
+		190FE6162F15F5217B2944E6944E1E91 /* CocoaMQTTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0638115E50DCA2C15EB3C6053CD1F3B /* CocoaMQTTMessage.swift */; };
+		1942F7D3B7722A5637C3FC0BE44B1E6C /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 543BF5D1EC89AC013065E5D32869E782 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C7C608091334B29AA1F96D400B24326 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B01ACB1C1E2DEF8AB29C743D5B7A7E /* GCDAsyncSocket.m */; };
 		21B7F743314F37F16A53BD74D1468390 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */; };
 		24B230C5D2F2B6972440D1D962FE5E23 /* Pods-beeperTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B8B0A32DE7A00FE05869722159F14FE0 /* Pods-beeperTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2922C954DCA50DB1C087E9E9C9440393 /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A73B377AF91FEA42F3856C5F2DB7DFDA /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2922C954DCA50DB1C087E9E9C9440393 /* CocoaAsyncSocket-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E4F68E1222AD96E3E6DBA9400F0AA87D /* CocoaAsyncSocket-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2BF6FBC0A64BF107C5D64C61F1397770 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BCD2FDDFD225E2C9B7415B56514F66CA /* SwiftyJSON-dummy.m */; };
 		3F6947B9A303F11E06D4008175E259DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */; };
-		411EE6BA92B228BF3497175C14FC7A90 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 02B73F6A1EA6E486B68F230A21A1F15E /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		411EE6BA92B228BF3497175C14FC7A90 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 94A0D6980A26D1A2014E858F6D88ADEE /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D659CD678A3B9D982326EBA499BC47B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1800B58775592019CAC5155C8DB1DFB6 /* Security.framework */; };
 		4EC10DEF188842DD420BB35C10AFDF8B /* Pods-beeperTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D0BBD9E81F1B3EC7DFA133F709F052B /* Pods-beeperTests-dummy.m */; };
-		53DC57647E7D3164985D9C3E480EF5AC /* CocoaMQTTFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97163AA1BEF7D58AD5249A72FF7BBF56 /* CocoaMQTTFrame.swift */; };
-		6FFB23DD5E8DD756D3A4AB53EEE4BA8E /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = A15E2D49742A915A0494190E5B8F986D /* GCDAsyncUdpSocket.m */; };
-		7E1CED828DD74E8CD2D65231B4DD8EAE /* Pods-beeper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12D30C8364025F449469C1EEF92BC1BA /* Pods-beeper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		53DC57647E7D3164985D9C3E480EF5AC /* CocoaMQTTFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853CDA390318ED72524A681304D70A7 /* CocoaMQTTFrame.swift */; };
+		6FFB23DD5E8DD756D3A4AB53EEE4BA8E /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F506B07E40C61F190ADDF6C93A283 /* GCDAsyncUdpSocket.m */; };
+		7B4CE5C84161E2BFE477F42DFD634382 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = F379BD3235312A86859D4851819E949B /* SwiftyJSON.swift */; };
 		7E68A3F42580E83E5140F697EC30AF3B /* CoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275A9397205A7942B52E2C9A29966F2A /* CoreServices.framework */; };
+		8054C59A091EF53BFDEA371ED558E034 /* Pods-beeper-beeperUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E0EB9E7A86A0F0862EB6B0E333F60 /* Pods-beeper-beeperUITests-dummy.m */; };
 		9B536B63FE4246B014EC58E3D374FA86 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFB992066B50760AE6C9C19FA2900827 /* CocoaAsyncSocket.framework */; };
 		9E670263B95AF11C5AEDA0FAEE68F0B3 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */; };
-		A2D145067636D58DC23716FF04E0F4BE /* CocoaMQTT.h in Headers */ = {isa = PBXBuildFile; fileRef = C74D83398AD00FD6D4FB2B2EA23A2450 /* CocoaMQTT.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A9926DD0A51D6690BC3688206EF5AD11 /* Pods-beeper-beeperUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A2E0EB9E7A86A0F0862EB6B0E333F60 /* Pods-beeper-beeperUITests-dummy.m */; };
-		AE71B76CA91B303367F0524436860F0A /* Pods-beeper-beeperUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94C9D4E5163D0574311DACB8CFF81F9D /* Pods-beeper-beeperUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF77DA76BD5962EE7DD383126BBBBAC8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F0E218B24D989B20987EF6DDBD56B71 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E505FB362BF41E54955D3532A7208FB9 /* CocoaMQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D40FB8552440BB345A8571D4A5E0F9 /* CocoaMQTT.swift */; };
-		E96CF28B6AE7ED29EC701E33716C117F /* CocoaMQTT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B9E3D4354EF279428153550140E0FDB /* CocoaMQTT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F9F3A1E5BE1AAA82892D8EFF02FA3B30 /* CocoaMQTT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E26FC2B8241BE9D7EAD3BDE92FCEEF4D /* CocoaMQTT-dummy.m */; };
-		FBB70AF3F803450935EE98C837D98688 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48CEFC0430AC299632BA88CDA704253F /* CocoaAsyncSocket-dummy.m */; };
-		FE9F5477CA8CC967374C84838107FEBE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */; };
+		A2D145067636D58DC23716FF04E0F4BE /* CocoaMQTT.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C74A449BE9B3CABC9B475140D17B96C /* CocoaMQTT.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4E95A232DB2CFF3B5910ABED1441D48 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */; };
+		BD2FFC76B740E2BA35D121D7D9A61639 /* Pods-beeper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B43E5579AD87C5296187ABB4FF00E14 /* Pods-beeper-dummy.m */; };
+		DF77DA76BD5962EE7DD383126BBBBAC8 /* GCDAsyncSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF7379829089258ACEF142878D1C401 /* GCDAsyncSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E196AC01B969B32AD2E02D5BE0267C97 /* Pods-beeper-beeperUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 94C9D4E5163D0574311DACB8CFF81F9D /* Pods-beeper-beeperUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E505FB362BF41E54955D3532A7208FB9 /* CocoaMQTT.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9235F820BD71580C5F5E1B9E84C6BBE /* CocoaMQTT.swift */; };
+		E6EC64ABA3B69C1316B447981949BADE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */; };
+		E96CF28B6AE7ED29EC701E33716C117F /* CocoaMQTT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 687A4A0A32C4825128F18373C4014110 /* CocoaMQTT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9F3A1E5BE1AAA82892D8EFF02FA3B30 /* CocoaMQTT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B5798679F3193A88E1563BF24A4B9324 /* CocoaMQTT-dummy.m */; };
+		FBB70AF3F803450935EE98C837D98688 /* CocoaAsyncSocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9345C57AA31A1FED0C85CB3648031759 /* CocoaAsyncSocket-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		202C895AB2B2D4359435D5E356F4D1E7 /* PBXContainerItemProxy */ = {
+		1253D326D43F59BF5F63F82FCB404005 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
+		2AA07F95059C58171DB3C695514D07D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB168A830EFA6136FA93357D1F1511A;
+			remoteInfo = CocoaMQTT;
+		};
+		4691555E34EFDA7B068FA2D656D579DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
 			remoteInfo = CocoaAsyncSocket;
 		};
-		5914E1C7C2080D2BA8CC91CEBFA2C77E /* PBXContainerItemProxy */ = {
+		55E4A73052FAA0B2D667E6A38532378B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
 			remoteInfo = CocoaAsyncSocket;
 		};
-		9FBC9CF435CF717B44DE6E2452995784 /* PBXContainerItemProxy */ = {
+		75E4561104E70D2A24C2F5741E7D5705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EB168A830EFA6136FA93357D1F1511A;
+			remoteInfo = CocoaMQTT;
+		};
+		C4134E288EDEA68DA972440FE7A090B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6083682834ABE0AE7BD1CBF06CADD036;
 			remoteInfo = CocoaAsyncSocket;
 		};
-		E08B68923BB035E28864A8A32F433FA0 /* PBXContainerItemProxy */ = {
+		DAB1857E48DE9BBACEF5E5CADD952167 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D118A6A04828FD3CDA8640CD2B6796D2;
+			remoteInfo = SwiftyJSON;
+		};
+		F06C6021AB26567BD31BC53837B8EDA1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 7372BC48681393BABDC0EB4AE0592701;
 			remoteInfo = "Pods-beeper";
 		};
-		EA2E550E73F47CFA5F2ACF69F06133FF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EB168A830EFA6136FA93357D1F1511A;
-			remoteInfo = CocoaMQTT;
-		};
-		F610A68C320E89C4157D2EF8AFDDE877 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4EB168A830EFA6136FA93357D1F1511A;
-			remoteInfo = CocoaMQTT;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02B73F6A1EA6E486B68F230A21A1F15E /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		027699428DF041F46ED0F4B6129E56DE /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
 		12D30C8364025F449469C1EEF92BC1BA /* Pods-beeper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-beeper-umbrella.h"; sourceTree = "<group>"; };
 		175162D47880D3DA690CD08762FF04FA /* Pods-beeper-beeperUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-beeper-beeperUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1800B58775592019CAC5155C8DB1DFB6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		1D4F506B07E40C61F190ADDF6C93A283 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		2389A145A2316A91403C05FA2AD2C727 /* Pods-beeper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-beeper.modulemap"; sourceTree = "<group>"; };
 		275A9397205A7942B52E2C9A29966F2A /* CoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreServices.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		2853CDA390318ED72524A681304D70A7 /* CocoaMQTTFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaMQTTFrame.swift; path = Source/CocoaMQTTFrame.swift; sourceTree = "<group>"; };
 		35EC5A4F34A2C87867CE4E3D58CBDE88 /* Pods-beeper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeper-Info.plist"; sourceTree = "<group>"; };
 		4001BF26BED54B5D3AC75DE30CC13D6B /* Pods-beeper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeper-acknowledgements.plist"; sourceTree = "<group>"; };
-		47EADF5EB6323A4473AB247622688C44 /* Pods_beeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeperTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48CEFC0430AC299632BA88CDA704253F /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		41431016FB4763D29C242E4D8CBB977C /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
+		47EADF5EB6323A4473AB247622688C44 /* Pods_beeperTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_beeperTests.framework; path = "Pods-beeperTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B43E5579AD87C5296187ABB4FF00E14 /* Pods-beeper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-beeper-dummy.m"; sourceTree = "<group>"; };
+		4C74A449BE9B3CABC9B475140D17B96C /* CocoaMQTT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaMQTT.h; path = Source/CocoaMQTT.h; sourceTree = "<group>"; };
 		4F3559BE2383BD4CCBD8E8D47EB4640A /* Pods-beeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeper.release.xcconfig"; sourceTree = "<group>"; };
-		52745E0004851535EED5BEE4623AB92C /* CocoaMQTT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaMQTT-prefix.pch"; sourceTree = "<group>"; };
+		543BF5D1EC89AC013065E5D32869E782 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		5825F7A3E9F912BA0D7EAB10E0DD36EC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 		5D0BBD9E81F1B3EC7DFA133F709F052B /* Pods-beeperTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-beeperTests-dummy.m"; sourceTree = "<group>"; };
-		60EAAD924C72689E641E4B3F653E9C1E /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
-		647578AE4ECD7D1ED210994BE6F29E6E /* CocoaMQTT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaMQTT-Info.plist"; sourceTree = "<group>"; };
+		687A4A0A32C4825128F18373C4014110 /* CocoaMQTT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaMQTT-umbrella.h"; sourceTree = "<group>"; };
 		6A2E0EB9E7A86A0F0862EB6B0E333F60 /* Pods-beeper-beeperUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-beeper-beeperUITests-dummy.m"; sourceTree = "<group>"; };
-		6B9E3D4354EF279428153550140E0FDB /* CocoaMQTT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaMQTT-umbrella.h"; sourceTree = "<group>"; };
-		6BE60E8E8FA5381E406F70D979DC53B8 /* CocoaAsyncSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.debug.xcconfig; sourceTree = "<group>"; };
-		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaAsyncSocket.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D26F29878B76F308F3369E2254B2F30 /* CocoaAsyncSocket.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaAsyncSocket.modulemap; sourceTree = "<group>"; };
 		777C3195823DA6E02C0D9C84359D5319 /* Pods-beeper-beeperUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeper-beeperUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7E73D6F5C96A1AC8432CACB17FC2E936 /* Pods-beeper-beeperUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeper-beeperUITests-Info.plist"; sourceTree = "<group>"; };
+		81B6AE95B6B45B9F4FC79005853217E0 /* CocoaMQTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaMQTT.debug.xcconfig; sourceTree = "<group>"; };
 		8E326BB3AEAF07CCF16C68C7D4D13610 /* Pods-beeper-beeperUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-beeper-beeperUITests-frameworks.sh"; sourceTree = "<group>"; };
 		929A2AAD4F191F15AABA96E827BE22EC /* Pods-beeperTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeperTests.release.xcconfig"; sourceTree = "<group>"; };
+		9345C57AA31A1FED0C85CB3648031759 /* CocoaAsyncSocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaAsyncSocket-dummy.m"; sourceTree = "<group>"; };
+		93B01ACB1C1E2DEF8AB29C743D5B7A7E /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
 		94710E85E5B02599A508761992CF482B /* Pods-beeperTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeperTests.debug.xcconfig"; sourceTree = "<group>"; };
+		94A0D6980A26D1A2014E858F6D88ADEE /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncUdpSocket.h; path = Source/GCD/GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		94C9D4E5163D0574311DACB8CFF81F9D /* Pods-beeper-beeperUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-beeper-beeperUITests-umbrella.h"; sourceTree = "<group>"; };
-		97163AA1BEF7D58AD5249A72FF7BBF56 /* CocoaMQTTFrame.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaMQTTFrame.swift; path = Source/CocoaMQTTFrame.swift; sourceTree = "<group>"; };
-		9A003F998908A7364A77B5630ACDFFEB /* CocoaMQTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaMQTT.release.xcconfig; sourceTree = "<group>"; };
 		9BB5013D90AC94EAA765CC986F0FC3B6 /* Pods-beeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeper.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F0E218B24D989B20987EF6DDBD56B71 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
-		A15E2D49742A915A0494190E5B8F986D /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncUdpSocket.m; path = Source/GCD/GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
-		A73B377AF91FEA42F3856C5F2DB7DFDA /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
+		9D91F0821A41D1C247C9B4814C676529 /* CocoaMQTT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaMQTT-Info.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A9235F820BD71580C5F5E1B9E84C6BBE /* CocoaMQTT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaMQTT.swift; path = Source/CocoaMQTT.swift; sourceTree = "<group>"; };
 		AE83E033207DAE23FF1757BA891D1602 /* Pods-beeper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-beeper-acknowledgements.markdown"; sourceTree = "<group>"; };
 		AED84E9ADF99D00A996FDA60F77221EF /* Pods-beeper-beeperUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-beeper-beeperUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AFB992066B50760AE6C9C19FA2900827 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B30CFB9DCDED9DEC454F9B37F8513980 /* Pods_beeper_beeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeper_beeperUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B78543FB04AAC679BC6C922A06A43515 /* CocoaMQTT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaMQTT.modulemap; sourceTree = "<group>"; };
+		B0638115E50DCA2C15EB3C6053CD1F3B /* CocoaMQTTMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaMQTTMessage.swift; path = Source/CocoaMQTTMessage.swift; sourceTree = "<group>"; };
+		B30CFB9DCDED9DEC454F9B37F8513980 /* Pods_beeper_beeperUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_beeper_beeperUITests.framework; path = "Pods-beeper-beeperUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5798679F3193A88E1563BF24A4B9324 /* CocoaMQTT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaMQTT-dummy.m"; sourceTree = "<group>"; };
+		B875A72CD2BC2944AE60F661713D2952 /* CocoaMQTT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaMQTT.release.xcconfig; sourceTree = "<group>"; };
 		B8B0A32DE7A00FE05869722159F14FE0 /* Pods-beeperTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-beeperTests-umbrella.h"; sourceTree = "<group>"; };
 		B95129F3CFA9D9A6CBD63D4EE797EAE5 /* Pods-beeperTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-beeperTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BB5843F857728CB124B65F5465368814 /* CocoaAsyncSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaAsyncSocket.release.xcconfig; sourceTree = "<group>"; };
+		BAB6970485038BA2D9562C94F9B798B4 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		BBF7379829089258ACEF142878D1C401 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = Source/GCD/GCDAsyncSocket.h; sourceTree = "<group>"; };
+		BCD2FDDFD225E2C9B7415B56514F66CA /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		C021053112D50D05ED5811C287B4F977 /* Pods-beeperTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-beeperTests.modulemap"; sourceTree = "<group>"; };
-		C054FE5E96C2E9ADEF9D7B94DCE6D9BA /* CocoaMQTTMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaMQTTMessage.swift; path = Source/CocoaMQTTMessage.swift; sourceTree = "<group>"; };
-		C4D559E41A0BCA5310CE1E5E95D5B605 /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
-		C6D40FB8552440BB345A8571D4A5E0F9 /* CocoaMQTT.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CocoaMQTT.swift; path = Source/CocoaMQTT.swift; sourceTree = "<group>"; };
-		C74D83398AD00FD6D4FB2B2EA23A2450 /* CocoaMQTT.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CocoaMQTT.h; path = Source/CocoaMQTT.h; sourceTree = "<group>"; };
-		D012EF7D7567D5233F68DD441A997F5D /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = GCDAsyncSocket.m; path = Source/GCD/GCDAsyncSocket.m; sourceTree = "<group>"; };
-		D2B264E2BEB759985AEEC5858024233C /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
-		D77FF246FC5CA04A17911E6DC3D01F0C /* Pods_beeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_beeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E26FC2B8241BE9D7EAD3BDE92FCEEF4D /* CocoaMQTT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CocoaMQTT-dummy.m"; sourceTree = "<group>"; };
-		E6A111E1AD75070A28B7E3DEA0E230DC /* CocoaMQTT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CocoaMQTT.debug.xcconfig; sourceTree = "<group>"; };
-		E6A4E1627379D6540B81A470C575D716 /* CocoaMQTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CocoaMQTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4C894E904BAA78FEB8B417AD2F933F1 /* SwiftyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyJSON-Info.plist"; sourceTree = "<group>"; };
+		D16C42FB9291A0E8A6280320B6FE8AD6 /* CocoaMQTT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaMQTT-prefix.pch"; sourceTree = "<group>"; };
+		D77FF246FC5CA04A17911E6DC3D01F0C /* Pods_beeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_beeper.framework; path = "Pods-beeper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC4B184143AC66AB7C77B6FA5F564B5 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
+		DAD8D5A910A907BCA8FDA12DEB30250C /* SwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.debug.xcconfig; sourceTree = "<group>"; };
+		E165B815AACCA4E035109358F38D4731 /* CocoaAsyncSocket-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CocoaAsyncSocket-Info.plist"; sourceTree = "<group>"; };
+		E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E26C60ACF3ECDF309BD684E96E4805DC /* CocoaAsyncSocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-prefix.pch"; sourceTree = "<group>"; };
+		E4F68E1222AD96E3E6DBA9400F0AA87D /* CocoaAsyncSocket-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CocoaAsyncSocket-umbrella.h"; sourceTree = "<group>"; };
+		E6A4E1627379D6540B81A470C575D716 /* CocoaMQTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CocoaMQTT.framework; path = CocoaMQTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBEDE4D7C4321ECC3807EC0C958DB920 /* Pods-beeperTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeperTests-Info.plist"; sourceTree = "<group>"; };
 		F1153D6CF556F8062F9247E7D479D7D9 /* Pods-beeperTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeperTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F379BD3235312A86859D4851819E949B /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON/SwiftyJSON.swift; sourceTree = "<group>"; };
+		FA8C270A1CA6502076E8D06379E267B6 /* SwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.release.xcconfig; sourceTree = "<group>"; };
 		FA9B7854868B5A6308EA6A774AF252D4 /* Pods-beeper-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-beeper-frameworks.sh"; sourceTree = "<group>"; };
+		FB70DF4C33F49DACF0F3C90EAA9AC37E /* CocoaMQTT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CocoaMQTT.modulemap; sourceTree = "<group>"; };
 		FE409A923DC9CB9ED49DD6F641762B1D /* Pods-beeper-beeperUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-beeper-beeperUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		FEE7170A6D92F48A67BAA9C185D5AB78 /* Pods-beeper-beeperUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-beeper-beeperUITests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		778E9A61382890D0D8A090AC9ED7A97B /* Frameworks */ = {
+		7818606FA4B725242E9811C494383EDD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				216F48F74FFBD6D34E1FE0581CE9A38F /* Cocoa.framework in Frameworks */,
+				E6EC64ABA3B69C1316B447981949BADE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7F2EC92158C4016C06F29F07CEA4070C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17CFB000F339FD08A48945136E50B861 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +190,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				21B7F743314F37F16A53BD74D1468390 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90F93EABDE5FCD97EB915895C3B57DAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E95A232DB2CFF3B5910ABED1441D48 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,30 +220,48 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6140BEE3660AB6355C3C163D2F95D86 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FE9F5477CA8CC967374C84838107FEBE /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1611BA2A2BC840087FBF3805FBE12BD4 /* Support Files */ = {
+		04BFF40C73DDFA9742663B1C59984FE1 /* CocoaAsyncSocket */ = {
 			isa = PBXGroup;
 			children = (
-				B78543FB04AAC679BC6C922A06A43515 /* CocoaMQTT.modulemap */,
-				E26FC2B8241BE9D7EAD3BDE92FCEEF4D /* CocoaMQTT-dummy.m */,
-				647578AE4ECD7D1ED210994BE6F29E6E /* CocoaMQTT-Info.plist */,
-				52745E0004851535EED5BEE4623AB92C /* CocoaMQTT-prefix.pch */,
-				6B9E3D4354EF279428153550140E0FDB /* CocoaMQTT-umbrella.h */,
-				E6A111E1AD75070A28B7E3DEA0E230DC /* CocoaMQTT.debug.xcconfig */,
-				9A003F998908A7364A77B5630ACDFFEB /* CocoaMQTT.release.xcconfig */,
+				BBF7379829089258ACEF142878D1C401 /* GCDAsyncSocket.h */,
+				93B01ACB1C1E2DEF8AB29C743D5B7A7E /* GCDAsyncSocket.m */,
+				94A0D6980A26D1A2014E858F6D88ADEE /* GCDAsyncUdpSocket.h */,
+				1D4F506B07E40C61F190ADDF6C93A283 /* GCDAsyncUdpSocket.m */,
+				1E13EB12215DCE04DFC51A021B509176 /* Support Files */,
+			);
+			name = CocoaAsyncSocket;
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		1E13EB12215DCE04DFC51A021B509176 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6D26F29878B76F308F3369E2254B2F30 /* CocoaAsyncSocket.modulemap */,
+				9345C57AA31A1FED0C85CB3648031759 /* CocoaAsyncSocket-dummy.m */,
+				E165B815AACCA4E035109358F38D4731 /* CocoaAsyncSocket-Info.plist */,
+				E26C60ACF3ECDF309BD684E96E4805DC /* CocoaAsyncSocket-prefix.pch */,
+				E4F68E1222AD96E3E6DBA9400F0AA87D /* CocoaAsyncSocket-umbrella.h */,
+				41431016FB4763D29C242E4D8CBB977C /* CocoaAsyncSocket.debug.xcconfig */,
+				027699428DF041F46ED0F4B6129E56DE /* CocoaAsyncSocket.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/CocoaMQTT";
+			path = "../Target Support Files/CocoaAsyncSocket";
+			sourceTree = "<group>";
+		};
+		237544A8840FD4EE3E4BEB0C082BB36C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */,
+				E6A4E1627379D6540B81A470C575D716 /* CocoaMQTT.framework */,
+				D77FF246FC5CA04A17911E6DC3D01F0C /* Pods_beeper.framework */,
+				B30CFB9DCDED9DEC454F9B37F8513980 /* Pods_beeper_beeperUITests.framework */,
+				47EADF5EB6323A4473AB247622688C44 /* Pods_beeperTests.framework */,
+				E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		26E719CF5E34E36EE3F4A0E7C0C02EFD /* Frameworks */ = {
@@ -210,18 +271,6 @@
 				AB1624B7E6DBE05F33C6ECD4D2876D44 /* OS X */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4D21AC2D536601986359AAC2486CB4D2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6CBEFE4F9E22AFDC6347A739BB35FF8C /* CocoaAsyncSocket.framework */,
-				E6A4E1627379D6540B81A470C575D716 /* CocoaMQTT.framework */,
-				D77FF246FC5CA04A17911E6DC3D01F0C /* Pods_beeper.framework */,
-				B30CFB9DCDED9DEC454F9B37F8513980 /* Pods_beeper_beeperUITests.framework */,
-				47EADF5EB6323A4473AB247622688C44 /* Pods_beeperTests.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		5257E7054F127C7C3861B2B6E7AE1729 /* Pods-beeperTests */ = {
@@ -250,16 +299,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A0762A8DC5F5F868E8CA3B7FA9E66168 /* CocoaAsyncSocket */ = {
+		6DF3F86ABAABA13DB9177C185D20E694 /* SwiftyJSON */ = {
 			isa = PBXGroup;
 			children = (
-				9F0E218B24D989B20987EF6DDBD56B71 /* GCDAsyncSocket.h */,
-				D012EF7D7567D5233F68DD441A997F5D /* GCDAsyncSocket.m */,
-				02B73F6A1EA6E486B68F230A21A1F15E /* GCDAsyncUdpSocket.h */,
-				A15E2D49742A915A0494190E5B8F986D /* GCDAsyncUdpSocket.m */,
-				C42CEB9515A03FBCEEBCA22DA81DD045 /* Support Files */,
+				F379BD3235312A86859D4851819E949B /* SwiftyJSON.swift */,
+				AC8CB9A56783D1FD407FABE1FEC55D71 /* Support Files */,
 			);
-			path = CocoaAsyncSocket;
+			name = SwiftyJSON;
+			path = SwiftyJSON;
+			sourceTree = "<group>";
+		};
+		9886237D6FE4281BD97D25EF00BD6BB0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB70DF4C33F49DACF0F3C90EAA9AC37E /* CocoaMQTT.modulemap */,
+				B5798679F3193A88E1563BF24A4B9324 /* CocoaMQTT-dummy.m */,
+				9D91F0821A41D1C247C9B4814C676529 /* CocoaMQTT-Info.plist */,
+				D16C42FB9291A0E8A6280320B6FE8AD6 /* CocoaMQTT-prefix.pch */,
+				687A4A0A32C4825128F18373C4014110 /* CocoaMQTT-umbrella.h */,
+				81B6AE95B6B45B9F4FC79005853217E0 /* CocoaMQTT.debug.xcconfig */,
+				B875A72CD2BC2944AE60F661713D2952 /* CocoaMQTT.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CocoaMQTT";
 			sourceTree = "<group>";
 		};
 		AB1624B7E6DBE05F33C6ECD4D2876D44 /* OS X */ = {
@@ -270,6 +332,21 @@
 				1800B58775592019CAC5155C8DB1DFB6 /* Security.framework */,
 			);
 			name = "OS X";
+			sourceTree = "<group>";
+		};
+		AC8CB9A56783D1FD407FABE1FEC55D71 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAB6970485038BA2D9562C94F9B798B4 /* SwiftyJSON.modulemap */,
+				BCD2FDDFD225E2C9B7415B56514F66CA /* SwiftyJSON-dummy.m */,
+				C4C894E904BAA78FEB8B417AD2F933F1 /* SwiftyJSON-Info.plist */,
+				DAC4B184143AC66AB7C77B6FA5F564B5 /* SwiftyJSON-prefix.pch */,
+				543BF5D1EC89AC013065E5D32869E782 /* SwiftyJSON-umbrella.h */,
+				DAD8D5A910A907BCA8FDA12DEB30250C /* SwiftyJSON.debug.xcconfig */,
+				FA8C270A1CA6502076E8D06379E267B6 /* SwiftyJSON.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyJSON";
 			sourceTree = "<group>";
 		};
 		B1D189DFE61EF4DBEFC3BCF4DCF22B1F /* Pods-beeper-beeperUITests */ = {
@@ -289,28 +366,17 @@
 			path = "Target Support Files/Pods-beeper-beeperUITests";
 			sourceTree = "<group>";
 		};
-		B6CA13E1B3C7397316799E3F78E1981E /* Pods */ = {
+		BEFA040818F078054C380A672E65D022 /* CocoaMQTT */ = {
 			isa = PBXGroup;
 			children = (
-				A0762A8DC5F5F868E8CA3B7FA9E66168 /* CocoaAsyncSocket */,
-				CF71C41323AF62DE82C8C180E2596346 /* CocoaMQTT */,
+				4C74A449BE9B3CABC9B475140D17B96C /* CocoaMQTT.h */,
+				A9235F820BD71580C5F5E1B9E84C6BBE /* CocoaMQTT.swift */,
+				2853CDA390318ED72524A681304D70A7 /* CocoaMQTTFrame.swift */,
+				B0638115E50DCA2C15EB3C6053CD1F3B /* CocoaMQTTMessage.swift */,
+				9886237D6FE4281BD97D25EF00BD6BB0 /* Support Files */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		C42CEB9515A03FBCEEBCA22DA81DD045 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				60EAAD924C72689E641E4B3F653E9C1E /* CocoaAsyncSocket.modulemap */,
-				48CEFC0430AC299632BA88CDA704253F /* CocoaAsyncSocket-dummy.m */,
-				D2B264E2BEB759985AEEC5858024233C /* CocoaAsyncSocket-Info.plist */,
-				C4D559E41A0BCA5310CE1E5E95D5B605 /* CocoaAsyncSocket-prefix.pch */,
-				A73B377AF91FEA42F3856C5F2DB7DFDA /* CocoaAsyncSocket-umbrella.h */,
-				6BE60E8E8FA5381E406F70D979DC53B8 /* CocoaAsyncSocket.debug.xcconfig */,
-				BB5843F857728CB124B65F5465368814 /* CocoaAsyncSocket.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/CocoaAsyncSocket";
+			name = CocoaMQTT;
+			path = CocoaMQTT;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -318,22 +384,10 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				26E719CF5E34E36EE3F4A0E7C0C02EFD /* Frameworks */,
-				B6CA13E1B3C7397316799E3F78E1981E /* Pods */,
-				4D21AC2D536601986359AAC2486CB4D2 /* Products */,
+				D7885C1B273F0EADEABE77BB147ABB8D /* Pods */,
+				237544A8840FD4EE3E4BEB0C082BB36C /* Products */,
 				67DF003D30012C36AA8100AF3BA73E3F /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		CF71C41323AF62DE82C8C180E2596346 /* CocoaMQTT */ = {
-			isa = PBXGroup;
-			children = (
-				C74D83398AD00FD6D4FB2B2EA23A2450 /* CocoaMQTT.h */,
-				C6D40FB8552440BB345A8571D4A5E0F9 /* CocoaMQTT.swift */,
-				97163AA1BEF7D58AD5249A72FF7BBF56 /* CocoaMQTTFrame.swift */,
-				C054FE5E96C2E9ADEF9D7B94DCE6D9BA /* CocoaMQTTMessage.swift */,
-				1611BA2A2BC840087FBF3805FBE12BD4 /* Support Files */,
-			);
-			path = CocoaMQTT;
 			sourceTree = "<group>";
 		};
 		D56CCB3F8FF019B629D1FF11F886DB33 /* Pods-beeper */ = {
@@ -353,6 +407,16 @@
 			path = "Target Support Files/Pods-beeper";
 			sourceTree = "<group>";
 		};
+		D7885C1B273F0EADEABE77BB147ABB8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04BFF40C73DDFA9742663B1C59984FE1 /* CocoaAsyncSocket */,
+				BEFA040818F078054C380A672E65D022 /* CocoaMQTT */,
+				6DF3F86ABAABA13DB9177C185D20E694 /* SwiftyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -361,6 +425,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				24B230C5D2F2B6972440D1D962FE5E23 /* Pods-beeperTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B5815AD791E7025C82F676EFC68872D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12A96E50A3E5788CA3CD2C05976E1044 /* Pods-beeper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D7DD627DB5C5AD636646E57B685AFB2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1942F7D3B7722A5637C3FC0BE44B1E6C /* SwiftyJSON-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -373,19 +453,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FDD15E5D4672EFF60A854C3A89A48EC /* Headers */ = {
+		CCF8DA55C3AF306126844FE00F010322 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE71B76CA91B303367F0524436860F0A /* Pods-beeper-beeperUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B9CA7F9D8F1DC349475EFD5F6C7E4F58 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7E1CED828DD74E8CD2D65231B4DD8EAE /* Pods-beeper-umbrella.h in Headers */,
+				E196AC01B969B32AD2E02D5BE0267C97 /* Pods-beeper-beeperUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +486,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3F9CC43D3759DDFAF2590AE0A7B038F5 /* PBXTargetDependency */,
+				151195BB35DD911C24E1E0DE2A22FA97 /* PBXTargetDependency */,
 			);
 			name = "Pods-beeperTests";
 			productName = "Pods-beeperTests";
@@ -423,18 +495,19 @@
 		};
 		4CAE576EF6C79F872B5B1BA998EFCA58 /* Pods-beeper-beeperUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 220891ACF6A2B9A99DC90F7AFB8B70C3 /* Build configuration list for PBXNativeTarget "Pods-beeper-beeperUITests" */;
+			buildConfigurationList = 3FFDC1D42841066DD54188437FDF1575 /* Build configuration list for PBXNativeTarget "Pods-beeper-beeperUITests" */;
 			buildPhases = (
-				8FDD15E5D4672EFF60A854C3A89A48EC /* Headers */,
-				37CFD5A9395892B0C0C1334DADF0B072 /* Sources */,
-				D6140BEE3660AB6355C3C163D2F95D86 /* Frameworks */,
-				CBDA6F434E3E02C9EEBB65D831D9E508 /* Resources */,
+				CCF8DA55C3AF306126844FE00F010322 /* Headers */,
+				AA2216F6315F38CC2074C3E5399EA2FB /* Sources */,
+				7F2EC92158C4016C06F29F07CEA4070C /* Frameworks */,
+				6B46527F1E547896117A2AEB4F237E08 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D680F5FA118A88B6AFD8B973F109C93E /* PBXTargetDependency */,
-				DC6F67C3A139F1EF651CBA484662C335 /* PBXTargetDependency */,
+				67AE0D1E9DE743A4C57EAB60E31CBE3C /* PBXTargetDependency */,
+				878409737E3B4C651192BC87C14FDFB9 /* PBXTargetDependency */,
+				334796A42C7B2FDD5818FFF3996EFCC5 /* PBXTargetDependency */,
 			);
 			name = "Pods-beeper-beeperUITests";
 			productName = "Pods-beeper-beeperUITests";
@@ -453,7 +526,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2347FE82EB45E9031D5C845971141EA5 /* PBXTargetDependency */,
+				05348026C85559F2E9BD9794D8DCE98A /* PBXTargetDependency */,
 			);
 			name = CocoaMQTT;
 			productName = CocoaMQTT;
@@ -480,22 +553,41 @@
 		};
 		7372BC48681393BABDC0EB4AE0592701 /* Pods-beeper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD4245E8CB65ACE7CBE4A03E68E21282 /* Build configuration list for PBXNativeTarget "Pods-beeper" */;
+			buildConfigurationList = 81E7C608DE28E50C2DF11F58E7E1DF12 /* Build configuration list for PBXNativeTarget "Pods-beeper" */;
 			buildPhases = (
-				B9CA7F9D8F1DC349475EFD5F6C7E4F58 /* Headers */,
-				E7945BC995DEF2297EF5D5B0348E8EEA /* Sources */,
-				778E9A61382890D0D8A090AC9ED7A97B /* Frameworks */,
-				32A689A078506620342E00CFE7DD4CB8 /* Resources */,
+				0B5815AD791E7025C82F676EFC68872D /* Headers */,
+				2DF0423505C405C61CC691105F315B34 /* Sources */,
+				90F93EABDE5FCD97EB915895C3B57DAE /* Frameworks */,
+				B1FC37B75D094F196F30585345B9CB01 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				828678599F5488FC637A0369A7A5B026 /* PBXTargetDependency */,
-				657915F0E5075DBD1DF606E3B2261700 /* PBXTargetDependency */,
+				E69CBD50DDF25295721FE6CE2A2EF9E6 /* PBXTargetDependency */,
+				CD7CA60C1821892D63B0B6CA42C84D20 /* PBXTargetDependency */,
+				FC5ABC2A1E4ECA9A6F8A5B0F2920A87B /* PBXTargetDependency */,
 			);
 			name = "Pods-beeper";
 			productName = "Pods-beeper";
 			productReference = D77FF246FC5CA04A17911E6DC3D01F0C /* Pods_beeper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62468BF9C7EDA172E951A24083C3ECA7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
+			buildPhases = (
+				3D7DD627DB5C5AD636646E57B685AFB2 /* Headers */,
+				1700C451C98D9DCECBEDFC5E351C5A9E /* Sources */,
+				7818606FA4B725242E9811C494383EDD /* Frameworks */,
+				D098F7F0080A87A1F472C81FC2F85528 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftyJSON;
+			productName = SwiftyJSON;
+			productReference = E23C076BA70925415F490FEDB215DA92 /* SwiftyJSON.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -505,7 +597,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 11.4";
@@ -516,7 +608,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 4D21AC2D536601986359AAC2486CB4D2 /* Products */;
+			productRefGroup = 237544A8840FD4EE3E4BEB0C082BB36C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -525,19 +617,20 @@
 				7372BC48681393BABDC0EB4AE0592701 /* Pods-beeper */,
 				4CAE576EF6C79F872B5B1BA998EFCA58 /* Pods-beeper-beeperUITests */,
 				2FFFE217115691E57329BC7B3C1D8E4A /* Pods-beeperTests */,
+				D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		32A689A078506620342E00CFE7DD4CB8 /* Resources */ = {
+		6A231FBD74190F14185840BD3D30ACD2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6A231FBD74190F14185840BD3D30ACD2 /* Resources */ = {
+		6B46527F1E547896117A2AEB4F237E08 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -551,6 +644,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B1FC37B75D094F196F30585345B9CB01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B7B5EDC45A81FF70431CFBFB2ABDFFEB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -558,7 +658,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CBDA6F434E3E02C9EEBB65D831D9E508 /* Resources */ = {
+		D098F7F0080A87A1F472C81FC2F85528 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -568,11 +668,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		37CFD5A9395892B0C0C1334DADF0B072 /* Sources */ = {
+		1700C451C98D9DCECBEDFC5E351C5A9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9926DD0A51D6690BC3688206EF5AD11 /* Pods-beeper-beeperUITests-dummy.m in Sources */,
+				2BF6FBC0A64BF107C5D64C61F1397770 /* SwiftyJSON-dummy.m in Sources */,
+				7B4CE5C84161E2BFE477F42DFD634382 /* SwiftyJSON.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DF0423505C405C61CC691105F315B34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD2FFC76B740E2BA35D121D7D9A61639 /* Pods-beeper-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,60 +714,73 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7945BC995DEF2297EF5D5B0348E8EEA /* Sources */ = {
+		AA2216F6315F38CC2074C3E5399EA2FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				119C71E8D1752E44F362185B8495D988 /* Pods-beeper-dummy.m in Sources */,
+				8054C59A091EF53BFDEA371ED558E034 /* Pods-beeper-beeperUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2347FE82EB45E9031D5C845971141EA5 /* PBXTargetDependency */ = {
+		05348026C85559F2E9BD9794D8DCE98A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaAsyncSocket;
 			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 9FBC9CF435CF717B44DE6E2452995784 /* PBXContainerItemProxy */;
+			targetProxy = 4691555E34EFDA7B068FA2D656D579DA /* PBXContainerItemProxy */;
 		};
-		3F9CC43D3759DDFAF2590AE0A7B038F5 /* PBXTargetDependency */ = {
+		151195BB35DD911C24E1E0DE2A22FA97 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-beeper";
 			target = 7372BC48681393BABDC0EB4AE0592701 /* Pods-beeper */;
-			targetProxy = E08B68923BB035E28864A8A32F433FA0 /* PBXContainerItemProxy */;
+			targetProxy = F06C6021AB26567BD31BC53837B8EDA1 /* PBXContainerItemProxy */;
 		};
-		657915F0E5075DBD1DF606E3B2261700 /* PBXTargetDependency */ = {
+		334796A42C7B2FDD5818FFF3996EFCC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = CocoaMQTT;
-			target = 4EB168A830EFA6136FA93357D1F1511A /* CocoaMQTT */;
-			targetProxy = F610A68C320E89C4157D2EF8AFDDE877 /* PBXContainerItemProxy */;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = DAB1857E48DE9BBACEF5E5CADD952167 /* PBXContainerItemProxy */;
 		};
-		828678599F5488FC637A0369A7A5B026 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = CocoaAsyncSocket;
-			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 202C895AB2B2D4359435D5E356F4D1E7 /* PBXContainerItemProxy */;
-		};
-		D680F5FA118A88B6AFD8B973F109C93E /* PBXTargetDependency */ = {
+		67AE0D1E9DE743A4C57EAB60E31CBE3C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaAsyncSocket;
 			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
-			targetProxy = 5914E1C7C2080D2BA8CC91CEBFA2C77E /* PBXContainerItemProxy */;
+			targetProxy = 55E4A73052FAA0B2D667E6A38532378B /* PBXContainerItemProxy */;
 		};
-		DC6F67C3A139F1EF651CBA484662C335 /* PBXTargetDependency */ = {
+		878409737E3B4C651192BC87C14FDFB9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CocoaMQTT;
 			target = 4EB168A830EFA6136FA93357D1F1511A /* CocoaMQTT */;
-			targetProxy = EA2E550E73F47CFA5F2ACF69F06133FF /* PBXContainerItemProxy */;
+			targetProxy = 75E4561104E70D2A24C2F5741E7D5705 /* PBXContainerItemProxy */;
+		};
+		CD7CA60C1821892D63B0B6CA42C84D20 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaMQTT;
+			target = 4EB168A830EFA6136FA93357D1F1511A /* CocoaMQTT */;
+			targetProxy = 2AA07F95059C58171DB3C695514D07D7 /* PBXContainerItemProxy */;
+		};
+		E69CBD50DDF25295721FE6CE2A2EF9E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CocoaAsyncSocket;
+			target = 6083682834ABE0AE7BD1CBF06CADD036 /* CocoaAsyncSocket */;
+			targetProxy = C4134E288EDEA68DA972440FE7A090B0 /* PBXContainerItemProxy */;
+		};
+		FC5ABC2A1E4ECA9A6F8A5B0F2920A87B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftyJSON;
+			target = D118A6A04828FD3CDA8640CD2B6796D2 /* SwiftyJSON */;
+			targetProxy = 1253D326D43F59BF5F63F82FCB404005 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0A5795DF9EF0918C119BB6F826E93B3A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A003F998908A7364A77B5630ACDFFEB /* CocoaMQTT.release.xcconfig */;
+			baseConfigurationReference = B875A72CD2BC2944AE60F661713D2952 /* CocoaMQTT.release.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -689,7 +811,253 @@
 			};
 			name = Release;
 		};
-		11D25F3D931385FE4A55BB204E6087A1 /* Debug */ = {
+		0AE172D8F2A4843BFACAD21A0ED26541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		1358DB0A6D5E4D7C72EE13C1BD65838D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAD8D5A910A907BCA8FDA12DEB30250C /* SwiftyJSON.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3E725DCDAF16DEEAD80352914303A1B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 027699428DF041F46ED0F4B6129E56DE /* CocoaAsyncSocket.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
+				PRODUCT_NAME = CocoaAsyncSocket;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55D3C13216E3030B270E8D7C7B5CDB15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AED84E9ADF99D00A996FDA60F77221EF /* Pods-beeper-beeperUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MODULEMAP_FILE = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6026B4BE9026D5466E975B812D680D14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 929A2AAD4F191F15AABA96E827BE22EC /* Pods-beeperTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-beeperTests/Pods-beeperTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MODULEMAP_FILE = "Target Support Files/Pods-beeperTests/Pods-beeperTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7E36F6091AF789BF2C3A58FB09CFF4B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94710E85E5B02599A508761992CF482B /* Pods-beeperTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-beeperTests/Pods-beeperTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MODULEMAP_FILE = "Target Support Files/Pods-beeperTests/Pods-beeperTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		808E544862838153672EA12FCC127D9A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -742,7 +1110,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -755,11 +1123,83 @@
 			};
 			name = Debug;
 		};
-		1EA693AE8EF6EDBE9D137DF9A3342CC0 /* Release */ = {
+		93F5CC2F94689309ABF2B40CAA4B6A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41431016FB4763D29C242E4D8CBB977C /* CocoaAsyncSocket.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
+				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
+				PRODUCT_NAME = CocoaAsyncSocket;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A61D94987CB6A9306C5FCC7FF81222CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA8C270A1CA6502076E8D06379E267B6 /* SwiftyJSON.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyJSON;
+				PRODUCT_NAME = SwiftyJSON;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B282ABA96D2E56D5BCD9F48467095D75 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4F3559BE2383BD4CCBD8E8D47EB4640A /* Pods-beeper.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -777,7 +1217,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MODULEMAP_FILE = "Target Support Files/Pods-beeper/Pods-beeper.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -791,151 +1231,13 @@
 			};
 			name = Release;
 		};
-		3E725DCDAF16DEEAD80352914303A1B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB5843F857728CB124B65F5465368814 /* CocoaAsyncSocket.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
-				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
-				PRODUCT_NAME = CocoaAsyncSocket;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5A0015C500EA9FBD46A3BC2991D4F241 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 94710E85E5B02599A508761992CF482B /* Pods-beeperTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-beeperTests/Pods-beeperTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-beeperTests/Pods-beeperTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8A5EA8DF91541E2B6BF499385B79AAA6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AED84E9ADF99D00A996FDA60F77221EF /* Pods-beeper-beeperUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		93F5CC2F94689309ABF2B40CAA4B6A24 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BE60E8E8FA5381E406F70D979DC53B8 /* CocoaAsyncSocket.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				MODULEMAP_FILE = "Target Support Files/CocoaAsyncSocket/CocoaAsyncSocket.modulemap";
-				PRODUCT_MODULE_NAME = CocoaAsyncSocket;
-				PRODUCT_NAME = CocoaAsyncSocket;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		980B8038022B5E620C96AF8041B7F3BD /* Debug */ = {
+		D3DFD9D8459638E766763EB8C6540095 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 777C3195823DA6E02C0D9C84359D5319 /* Pods-beeper-beeperUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -953,142 +1255,8 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MODULEMAP_FILE = "Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		9FC554FFA36DFC5B9D32F08A580F0655 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		AD35F9F627601F3462FC55CD6902E300 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 929A2AAD4F191F15AABA96E827BE22EC /* Pods-beeperTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-beeperTests/Pods-beeperTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-beeperTests/Pods-beeperTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		CB889C96ED0B3C70B11E2246A8CC92CB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BB5013D90AC94EAA765CC986F0FC3B6 /* Pods-beeper.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-beeper/Pods-beeper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
-				MODULEMAP_FILE = "Target Support Files/Pods-beeper/Pods-beeper.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1103,8 +1271,9 @@
 		};
 		D90E190C74790ADEA39D4E28C74836F5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6A111E1AD75070A28B7E3DEA0E230DC /* CocoaMQTT.debug.xcconfig */;
+			baseConfigurationReference = 81B6AE95B6B45B9F4FC79005853217E0 /* CocoaMQTT.debug.xcconfig */;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1135,14 +1304,52 @@
 			};
 			name = Debug;
 		};
+		DEC88132E66366E60C008BF0171B8193 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BB5013D90AC94EAA765CC986F0FC3B6 /* Pods-beeper.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-beeper/Pods-beeper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MODULEMAP_FILE = "Target Support Files/Pods-beeper/Pods-beeper.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		220891ACF6A2B9A99DC90F7AFB8B70C3 /* Build configuration list for PBXNativeTarget "Pods-beeper-beeperUITests" */ = {
+		3FFDC1D42841066DD54188437FDF1575 /* Build configuration list for PBXNativeTarget "Pods-beeper-beeperUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				980B8038022B5E620C96AF8041B7F3BD /* Debug */,
-				8A5EA8DF91541E2B6BF499385B79AAA6 /* Release */,
+				D3DFD9D8459638E766763EB8C6540095 /* Debug */,
+				55D3C13216E3030B270E8D7C7B5CDB15 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1150,8 +1357,17 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				11D25F3D931385FE4A55BB204E6087A1 /* Debug */,
-				9FC554FFA36DFC5B9D32F08A580F0655 /* Release */,
+				808E544862838153672EA12FCC127D9A /* Debug */,
+				0AE172D8F2A4843BFACAD21A0ED26541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62468BF9C7EDA172E951A24083C3ECA7 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1358DB0A6D5E4D7C72EE13C1BD65838D /* Debug */,
+				A61D94987CB6A9306C5FCC7FF81222CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1165,11 +1381,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BD4245E8CB65ACE7CBE4A03E68E21282 /* Build configuration list for PBXNativeTarget "Pods-beeper" */ = {
+		81E7C608DE28E50C2DF11F58E7E1DF12 /* Build configuration list for PBXNativeTarget "Pods-beeper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CB889C96ED0B3C70B11E2246A8CC92CB /* Debug */,
-				1EA693AE8EF6EDBE9D137DF9A3342CC0 /* Release */,
+				DEC88132E66366E60C008BF0171B8193 /* Debug */,
+				B282ABA96D2E56D5BCD9F48467095D75 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1177,8 +1393,8 @@
 		C597DE440A73812C9881D67EF2FABF6D /* Build configuration list for PBXNativeTarget "Pods-beeperTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5A0015C500EA9FBD46A3BC2991D4F241 /* Debug */,
-				AD35F9F627601F3462FC55CD6902E300 /* Release */,
+				7E36F6091AF789BF2C3A58FB09CFF4B2 /* Debug */,
+				6026B4BE9026D5466E975B812D680D14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

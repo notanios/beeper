@@ -8,6 +8,7 @@
 import Cocoa
 import AVFoundation
 import CocoaMQTT
+import SwiftyJSON
 
 let usernameKey = "usernamekey"
 let passwordKey = "passwordkey"
@@ -27,12 +28,30 @@ enum ConnStatus: String {
     case inProcess = "⏳In process"
 }
 
-let letters = [["1", "2", "3", "4"],
-               ["q", "w", "e", "r"]]
-let titles = [["badumtss", "coin", "applause", "cricket"],
-               ["drumroll", "gong", "sadtrombone", "cowsay"]]
+let letters = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+               ["q", "w", "e", "r", "t", "y", "u", "u", "i", "o", "p"],
+               ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
+               ["z", "x", "c", "v", "b", "n", "m"]]
 
-let sounds = ["badumtss", "coin", "applause", "cricket", "drumroll", "gong", "sadtrombone", "cowsay"]
+let soundMap = [["coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "0"],
+                ["coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin"],
+                ["coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin"],
+                ["coin", "coin", "coin", "coin", "coin", "coin", "coin"]]
+
+struct Sound {
+    let title: String
+    let key: String
+    let duration: Float = 0.0
+}
+
+let sounds = [Sound(title: "badumtss", key: "1"),
+              Sound(title: "coin", key: "2"),
+              Sound(title: "applause", key: "3"),
+              Sound(title: "cricket", key: "4"),
+              Sound(title: "drumroll", key: "q"),
+              Sound(title: "gong", key: "w"),
+              Sound(title: "sadtrombone", key: "e"),
+              Sound(title: "cowsay", key: "r")]
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, MQTTCommunicationDelegate, MQTTCOnnectionDelegate {
     
@@ -66,17 +85,18 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     @IBOutlet weak var isServerSwitch: NSSwitch!
     @IBOutlet weak var playSwitch: NSSwitch!
     @IBOutlet weak var collectionView: NSCollectionView!
-    var players: [[AVAudioPlayer]]?
+    var players: [[AVAudioPlayer?]]?
+    var soundMap: [[String]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initiatePlayers()
+        initPlayers()
         
         collectionView.register(SoundCollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier("SoundCollectionViewItem"))
         
         let flowLayout = NSCollectionViewFlowLayout()
-        flowLayout.itemSize = NSSize(width: 140.0, height: 120.0)
+        flowLayout.itemSize = NSSize(width: 80.0, height: 80.0)
         flowLayout.sectionInset = NSEdgeInsets(top: 15.0, left: 0.0, bottom: 0.0, right: 0.0)
         flowLayout.minimumInteritemSpacing = 10.0
         flowLayout.minimumLineSpacing = 5.0
@@ -120,7 +140,6 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             
             connect.connHandler = { connection in
                 self.enableKeyMonitor()
-                self.status = .inProcess
                 _ = self.connect(withConnection: connection)
             }
         }
@@ -144,6 +163,13 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         if self.isServerSwitch.state == .on {
             if let indexPath = indexPath(ofLetter: message) {
                 self.handle(RemoteIndexPath: indexPath)
+            } else {
+                switch message {
+                case "list":
+                    MQTTService.shared.publish(Message: "manifest:" + "[{'sound': 'key'}, {'another_sound': 'another_key'}]", toChannel: soundboardTopic)
+                default:
+                    break
+                }
             }
         }
     }
@@ -218,6 +244,8 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             return false
         }
         
+        self.status = .inProcess
+        
         MQTTService.shared.connectionDelegate = self
         MQTTService.shared.communicationDelegate = self
         MQTTService.shared.connect(toServer: connection.host, withPort: connection.port, username: connection.username, andPassword: connection.password)
@@ -246,15 +274,19 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             MQTTService.shared.publish(Message: letters[indexPath.section][indexPath.item], toChannel: nil)
         }
         
-        if self.playSwitch.state == .on {
-            self.players![indexPath.section][indexPath.item].play()
+        if self.playSwitch.state == .on && thereIsSoundAttached(indexPath) {
+            self.players![indexPath.section][indexPath.item]!.play()
         }
     }
     
     func handle(RemoteIndexPath indexPath: IndexPath) {
         if self.isServerSwitch.state == .on, self.playSwitch.state == .on {
-            self.players![indexPath.section][indexPath.item].play()
+            self.players![indexPath.section][indexPath.item]!.play()
         }
+    }
+    
+    func thereIsSoundAttached(_ indexPath: IndexPath) -> Bool {
+        return !self.soundMap![indexPath.section][indexPath.item].isEmpty
     }
     
     func indexPath(ofLetter string: String) -> IndexPath? {
@@ -283,35 +315,86 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         return nil
     }
     
-    func initiatePlayers() {
-        self.players = []
-        for i in 0...1 {
-            self.players?.append([])
-            for j in 0...3 {
-                let soundName = titles[i][j]
-                self.players![i].append(player(forFile: soundName, ext: "mp3")!)
+    func soudMap(ForSounds sounds: [Sound]) -> [[String]] {
+        var soundMap:[[String]] = []
+        
+        for (i, array) in letters.enumerated() {
+            soundMap.append([])
+            for (_, letter) in array.enumerated() {
+                if let soundName = soundName(ForKey: letter, fromSounds: sounds) {
+                    soundMap[i].append(soundName)
+                } else {
+                    soundMap[i].append("")
+                }
             }
         }
+        
+        return soundMap
+    }
+    
+    func soundName(ForKey key: String, fromSounds sounds: [Sound]) -> String? {
+        for sound in sounds {
+            if key == sound.key {
+                return sound.title
+            }
+        }
+        
+        return nil
+    }
+    
+    func initPlayers(WithSoundmap soundMap: [[String]]) {
+        self.soundMap = soundMap
+        self.players = []
+        
+        for (i, array) in letters.enumerated() {
+            self.players?.append([])
+            for (j, _) in array.enumerated() {
+                if !soundMap[i][j].isEmpty {
+                    self.players![i].append(self.player(forFile: soundMap[i][j], ext: "mp3")!)
+                } else {
+                    self.players![i].append(nil)
+                }
+            }
+        }
+    }
+    
+    func initPlayers() {
+        initPlayers(WithSoundmap: soudMap(ForSounds: sounds))
+    }
+    
+    func indexPathInSounds(_ indexPath: IndexPath) -> Bool {
+        return false
+    }
+    
+    func indexPathsFor(sounds: [Sound]) -> [IndexPath] {
+        return []
     }
 
 //    MARK: CollectionView delegates
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return letters[section].count
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
-        return 2
+        return letters.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
         let item = self.collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "SoundCollectionViewItem"), for: indexPath) as! SoundCollectionViewItem
-        
         let keyString = letters[indexPath.section][indexPath.item]
-        let desc = titles[indexPath.section][indexPath.item]
         
-        item.representedObject = SoundItem(imageName: "nil", keyStrokeName: keyString, desc: desc)
+        var desc: String? = nil
+        var imageName: String? = nil
+        
+        if thereIsSoundAttached(indexPath) {
+            desc = self.soundMap![indexPath.section][indexPath.item]
+            imageName = "NSTouchBarPlayTemplate"
+        }
+        
+        item.representedObject = SoundItem(imageName: imageName, keyStrokeName: keyString, desc: desc)
+        
         return item
     }
     

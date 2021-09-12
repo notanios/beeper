@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="18122" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
+        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="18122"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,33 +18,24 @@
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="140" height="120"/>
+            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-wV-pgc">
-                    <rect key="frame" x="27" y="11" width="87.5" height="86"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="82" id="LvT-9O-YPw"/>
-                        <constraint firstAttribute="width" constant="87" id="rt1-gM-fCM"/>
-                    </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSTouchBarPlayTemplate" id="hj8-Ya-84i"/>
-                </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IC6-oH-hlF">
-                    <rect key="frame" x="-2" y="84" width="144" height="33"/>
+                    <rect key="frame" x="-2" y="44" width="84" height="33"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="33" id="DNn-Nu-VUJ"/>
                     </constraints>
-                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="title" id="BuZ-tK-pT8">
-                        <font key="font" metaFont="system" size="21"/>
+                    <textFieldCell key="cell" lineBreakMode="truncatingMiddle" alignment="center" title="title" usesSingleLineMode="YES" id="BuZ-tK-pT8">
+                        <font key="font" metaFont="system" size="17"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
-                    <rect key="frame" x="18" y="32" width="104" height="44"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
+                    <rect key="frame" x="-2" y="-1" width="84" height="37"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="V3l-0N-0Fe"/>
-                        <constraint firstAttribute="width" constant="100" id="srE-Gz-U7c"/>
+                        <constraint firstAttribute="height" constant="37" id="5nB-03-u5H"/>
                     </constraints>
                     <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="key" id="xVj-Fc-x1s">
                         <font key="font" size="32" name="HelveticaNeue"/>
@@ -51,19 +43,26 @@
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-wV-pgc">
+                    <rect key="frame" x="15" y="-11" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Tpg-wc-zRU"/>
+                        <constraint firstAttribute="width" constant="50" id="ZlK-tg-bKg"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="hj8-Ya-84i"/>
+                </imageView>
             </subviews>
             <constraints>
-                <constraint firstItem="A9J-wV-pgc" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="04l-ZI-1lg"/>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="IC6-oH-hlF" secondAttribute="bottom" constant="5" id="0fh-0a-lfw"/>
+                <constraint firstAttribute="trailing" secondItem="J4W-Bd-Lib" secondAttribute="trailing" id="6bw-D0-eyq"/>
                 <constraint firstItem="IC6-oH-hlF" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="3" id="DYb-s8-7rx"/>
                 <constraint firstAttribute="trailing" secondItem="IC6-oH-hlF" secondAttribute="trailing" id="GB3-3j-2Wo"/>
-                <constraint firstItem="A9J-wV-pgc" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="25" id="MPh-lD-nEQ"/>
-                <constraint firstItem="J4W-Bd-Lib" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="Nly-di-2hb"/>
+                <constraint firstItem="A9J-wV-pgc" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="H4m-dh-0I6"/>
+                <constraint firstItem="J4W-Bd-Lib" firstAttribute="top" secondItem="IC6-oH-hlF" secondAttribute="bottom" constant="8" symbolic="YES" id="KQg-aT-wTk"/>
                 <constraint firstItem="IC6-oH-hlF" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="Nq0-RI-GOP"/>
+                <constraint firstItem="J4W-Bd-Lib" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="dhG-aN-9os"/>
             </constraints>
-            <point key="canvasLocation" x="184" y="134"/>
+            <point key="canvasLocation" x="154" y="114"/>
         </customView>
     </objects>
-    <resources>
-        <image name="NSTouchBarPlayTemplate" width="12" height="13"/>
-    </resources>
 </document>

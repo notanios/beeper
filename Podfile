@@ -5,6 +5,7 @@ target 'beeper' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'CocoaMQTT', '~>1.1.3'
+  pod 'SwiftyJSON', '~> 4.0'
 
   # Pods for beeper
 
