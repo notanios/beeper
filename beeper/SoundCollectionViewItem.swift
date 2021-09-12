@@ -22,7 +22,6 @@ class SoundCollectionViewItem: NSCollectionViewItem {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.systemPink.cgColor
     }
     
     override func viewDidAppear() {
@@ -32,6 +31,7 @@ class SoundCollectionViewItem: NSCollectionViewItem {
             self.imageLabel.image = NSImage(named: object.imageName ?? "")
             self.descLabel.stringValue = object.desc ?? "<no sound>"
             self.titleLabel.stringValue = object.keyStrokeName
+            view.layer?.backgroundColor = (object.desc != nil) ? NSColor.systemPink.cgColor : NSColor.systemGray.cgColor
         }
     }
     
