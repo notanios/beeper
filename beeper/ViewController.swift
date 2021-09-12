@@ -257,9 +257,13 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         
         switch command {
         case "m":
-            self.playSwitch.state = self.playSwitch.state == .off ? .on : .off
+            if self.playSwitch.isEnabled {
+                self.playSwitch.state = self.playSwitch.state == .off ? .on : .off
+            }
         case "l":
-            self.isServerSwitch.state = self.isServerSwitch.state == .off ? .on : .off
+            if self.isServerSwitch.isEnabled {
+                self.isServerSwitch.state = self.isServerSwitch.state == .off ? .on : .off
+            }
         default:
             if let indexPath = indexPath(ofLetter: event.characters!) {
                 handle(LocalIndexPath: indexPath)
