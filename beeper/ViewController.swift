@@ -38,10 +38,10 @@ let soundMap = [["coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin",
                 ["coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin", "coin"],
                 ["coin", "coin", "coin", "coin", "coin", "coin", "coin"]]
 
-struct Sound {
+struct Sound: Codable {
     let title: String
     let key: String
-    let duration: Float = 0.0
+    var duration: Float = 0.0
 }
 
 let sounds = [Sound(title: "badumtss", key: "1"),
@@ -166,7 +166,8 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             } else {
                 switch message {
                 case "list":
-                    MQTTService.shared.publish(Message: "manifest:" + "[{'sound': 'key'}, {'another_sound': 'another_key'}]", toChannel: soundboardTopic)
+                    let json = encodedJson(ForSounds: sounds)
+                    MQTTService.shared.publish(Message: "manifest:" + json, toChannel: soundboardTopic)
                 default:
                     break
                 }
@@ -346,6 +347,16 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         return nil
     }
     
+    func soundsToJsonable(_ sounds: [Sound]) -> [(String, String)] {
+        var jsonable: [(String, String)] = []
+        
+        for sound in sounds {
+            jsonable.append((sound.title, sound.key))
+        }
+        
+        return jsonable
+    }
+    
     func initPlayers(WithSoundmap soundMap: [[String]]) {
         self.soundMap = soundMap
         self.players = []
@@ -365,13 +376,13 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     func initPlayers() {
         initPlayers(WithSoundmap: soudMap(ForSounds: sounds))
     }
-    
-    func indexPathInSounds(_ indexPath: IndexPath) -> Bool {
-        return false
-    }
-    
-    func indexPathsFor(sounds: [Sound]) -> [IndexPath] {
-        return []
+
+    func encodedJson(ForSounds sounds: [Sound]) -> String {
+        let jsonEncoder = JSONEncoder()
+        let jsonData = try? jsonEncoder.encode(sounds)
+        let json = String(data: jsonData!, encoding: String.Encoding.utf8)
+        
+        return json!
     }
 
 //    MARK: CollectionView delegates
