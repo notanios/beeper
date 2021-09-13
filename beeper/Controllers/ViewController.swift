@@ -25,7 +25,8 @@ enum ConnStatus: String {
     case inProcess = "⏳In process"
 }
 
-private let defaultBoard = SoundBoard(sounds: [Sound(title: "badumtss", key: "1"),
+private let defaultBoard = SoundBoard(title: "Default Board",
+                                      sounds: [Sound(title: "badumtss", key: "1"),
                                                Sound(title: "coin", key: "2"),
                                                Sound(title: "applause", key: "3"),
                                                Sound(title: "cricket", key: "4"),

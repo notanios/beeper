@@ -27,7 +27,7 @@ class UDService {
         UserDefaults.standard.register(defaults: [StorageKeys.password.rawValue: connection.password])
     }
     
-    func eraseConnectionData() -> Void {
+    func forgetConnection() -> Void {
         UserDefaults.resetStandardUserDefaults()
     }
     
@@ -53,5 +53,51 @@ class UDService {
         }
         
         return Connection(username: username!, password: password!, host: host!, port: port!)
+    }
+    
+//    MARK: Sound Baords
+    func save(_ board: SoundBoard) {
+        if let boards = self.getBoards() {
+            var boardsPlus: [SoundBoard] = []
+            boardsPlus.append(contentsOf: boards)
+            boardsPlus.append(board)
+            
+            UserDefaults.standard.setValue(boardsPlus, forKey: StorageKeys.soundboards.rawValue)
+        }
+    }
+    
+    func remove(_ board: SoundBoard) {
+        if let boards = self.getBoards() {
+            for (index, storedBoard) in boards.enumerated() {
+                if board.title == storedBoard.title {
+                    let boardsBefore = boards[..<index]
+                    let boardsAfter = boards[index...]
+                    var boardsMinus: [SoundBoard] = []
+                    boardsMinus.append(contentsOf: boardsBefore)
+                    boardsMinus.append(contentsOf: boardsAfter)
+                    UserDefaults.standard.setValue(boardsMinus, forKey: StorageKeys.soundboards.rawValue)
+                }
+            }
+        }
+    }
+    
+    private func indexOf(_ board: SoundBoard) -> Int {
+        if let boards = self.getBoards() {
+            for (index, storedBoard) in boards.enumerated() {
+                if board.title == storedBoard.title {
+                    return index
+                }
+            }
+        }
+        
+        return -1
+    }
+    
+    private func getBoards() -> [SoundBoard]? {
+        return UserDefaults.standard.value(forKey: StorageKeys.soundboards.rawValue) as! [SoundBoard]?
+    }
+    
+    func getBoards() -> [SoundBoard] {
+        return self.getBoards()!
     }
 }

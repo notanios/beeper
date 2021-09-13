@@ -19,6 +19,7 @@ struct Sound: Codable {
 }
 
 struct SoundBoard {
+    let title: String
     var sounds: [Sound]
     
     func json() -> String {
