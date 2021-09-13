@@ -35,6 +35,7 @@
 		F5CE7ACA26EF7E8D0005F9FB /* UDService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CE7AC826EF7E8D0005F9FB /* UDService.swift */; };
 		F5CE7ACB26EF7E8D0005F9FB /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CE7AC926EF7E8D0005F9FB /* StorageService.swift */; };
 		F5CE7AD026EF7ED60005F9FB /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CE7ACF26EF7ED60005F9FB /* Board.swift */; };
+		F5CE7AD426EF8E160005F9FB /* PlayersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CE7AD326EF8E160005F9FB /* PlayersManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		F5CE7AC826EF7E8D0005F9FB /* UDService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDService.swift; sourceTree = "<group>"; };
 		F5CE7AC926EF7E8D0005F9FB /* StorageService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		F5CE7ACF26EF7ED60005F9FB /* Board.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		F5CE7AD326EF8E160005F9FB /* PlayersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 				F5CE7AC826EF7E8D0005F9FB /* UDService.swift */,
 				F5B75F8426DFC65B0061009A /* MQTTService.swift */,
 				F50DA56026E0CBFB001856B2 /* Transitions.swift */,
+				F5CE7AD326EF8E160005F9FB /* PlayersManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5CE7AD426EF8E160005F9FB /* PlayersManager.swift in Sources */,
 				F5B75F8226DFC0FD0061009A /* ConnectionViewController.swift in Sources */,
 				F50DA56126E0CBFB001856B2 /* Transitions.swift in Sources */,
 				F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */,

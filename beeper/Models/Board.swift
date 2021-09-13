@@ -8,9 +8,20 @@
 import Foundation
 
 let KEYS = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-               ["q", "w", "e", "r", "t", "y", "u", "u", "i", "o", "p"],
-               ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
-               ["z", "x", "c", "v", "b", "n", "m"]]
+            ["q", "w", "e", "r", "t", "y", "u", "u", "i", "o", "p"],
+            ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
+            ["z", "x", "c", "v", "b", "n", "m"]]
+
+func indexPath(ofLetter string: String) -> IndexPath? {
+    for (i, array) in KEYS.enumerated() {
+        for (j, letter) in array.enumerated() {
+            if letter == string {
+                return IndexPath(item: j, section: i)
+            }
+        }
+    }
+    return nil
+}
 
 struct Sound: Codable {
     let title: String

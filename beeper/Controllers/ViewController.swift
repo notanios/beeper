@@ -69,13 +69,11 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     @IBOutlet weak var isServerSwitch: NSSwitch!
     @IBOutlet weak var playSwitch: NSSwitch!
     @IBOutlet weak var collectionView: NSCollectionView!
-    var players: [[AVAudioPlayer?]]?
-    var soundMap: [[String]]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initPlayers()
+        PlayersManager.shared.initPlayers(WithSoundmap: defaultBoard.map())
         
         collectionView.register(SoundCollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier("SoundCollectionViewItem"))
         
@@ -231,69 +229,15 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             MQTTService.shared.publish(Message: KEYS[indexPath.section][indexPath.item], toChannel: nil)
         }
         
-        if self.playSwitch.state == .on, thereIsSoundAttached(indexPath) {
-            self.players![indexPath.section][indexPath.item]!.stop()
-            self.players![indexPath.section][indexPath.item]!.currentTime = 0.0
-            self.players![indexPath.section][indexPath.item]!.play()
+        if self.playSwitch.state == .on, PlayersManager.shared.isPlayer(atIndexPath:indexPath) {
+            PlayersManager.shared.playPlayer(atIndexPath: indexPath)
         }
     }
     
     func handle(RemoteIndexPath indexPath: IndexPath) {
         if self.isServerSwitch.state == .on, self.playSwitch.state == .on {
-            self.players![indexPath.section][indexPath.item]!.stop()
-            self.players![indexPath.section][indexPath.item]!.currentTime = 0.0
-            self.players![indexPath.section][indexPath.item]!.play()
+            PlayersManager.shared.playPlayer(atIndexPath: indexPath)
         }
-    }
-    
-    func thereIsSoundAttached(_ indexPath: IndexPath) -> Bool {
-        return !self.soundMap![indexPath.section][indexPath.item].isEmpty
-    }
-    
-    func indexPath(ofLetter string: String) -> IndexPath? {
-        for (i, array) in KEYS.enumerated() {
-            for (j, letter) in array.enumerated() {
-                if letter == string {
-                    return IndexPath(item: j, section: i)
-                }
-            }
-        }
-        return nil
-    }
-    
-    func player(forFile file:String, ext:String) -> AVAudioPlayer? {
-        let url = Bundle.main.url(forResource: file, withExtension: ext)!
-        do {
-            let audioPlayer = try AVAudioPlayer(contentsOf: url)
-            if audioPlayer.prepareToPlay() {
-                return audioPlayer
-            } else {
-                throw NSError()
-            }
-        } catch let error {
-            print(error.localizedDescription)
-        }
-        return nil
-    }
-    
-    func initPlayers(WithSoundmap soundMap: [[String]]) {
-        self.soundMap = soundMap
-        self.players = []
-        
-        for (i, array) in KEYS.enumerated() {
-            self.players?.append([])
-            for (j, _) in array.enumerated() {
-                if !soundMap[i][j].isEmpty {
-                    self.players![i].append(self.player(forFile: soundMap[i][j], ext: "mp3")!)
-                } else {
-                    self.players![i].append(nil)
-                }
-            }
-        }
-    }
-    
-    func initPlayers() {
-        initPlayers(WithSoundmap: defaultBoard.map())
     }
 
 
@@ -315,8 +259,8 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         var desc: String? = nil
         var imageName: String? = nil
         
-        if thereIsSoundAttached(indexPath) {
-            desc = self.soundMap![indexPath.section][indexPath.item]
+        if PlayersManager.shared.isPlayer(atIndexPath: indexPath) {
+            desc = PlayersManager.shared.soundMap![indexPath.section][indexPath.item]
             imageName = "NSTouchBarPlayTemplate"
         }
         
