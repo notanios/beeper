@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Sound: Codable {
+    let title: String
+    let key: String
+    var duration: Float = 0.0
+}
