@@ -25,21 +25,16 @@ enum ConnStatus: String {
     case inProcess = "⏳In process"
 }
 
-let letters = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
-               ["q", "w", "e", "r", "t", "y", "u", "u", "i", "o", "p"],
-               ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
-               ["z", "x", "c", "v", "b", "n", "m"]]
-
-let sounds = [Sound(title: "badumtss", key: "1"),
-              Sound(title: "coin", key: "2"),
-              Sound(title: "applause", key: "3"),
-              Sound(title: "cricket", key: "4"),
-              Sound(title: "drumroll", key: "q"),
-              Sound(title: "gong", key: "w"),
-              Sound(title: "sadtrombone", key: "e"),
-              Sound(title: "cowsay", key: "r"),
-              Sound(title: "booing", key: "a"),
-              Sound(title: "cheering", key: "s")]
+private let defaultBoard = SoundBoard(sounds: [Sound(title: "badumtss", key: "1"),
+                                               Sound(title: "coin", key: "2"),
+                                               Sound(title: "applause", key: "3"),
+                                               Sound(title: "cricket", key: "4"),
+                                               Sound(title: "drumroll", key: "q"),
+                                               Sound(title: "gong", key: "w"),
+                                               Sound(title: "sadtrombone", key: "e"),
+                                               Sound(title: "cowsay", key: "r"),
+                                               Sound(title: "booing", key: "a"),
+                                               Sound(title: "cheering", key: "s")])
 
 class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, MQTTCommunicationDelegate, MQTTCOnnectionDelegate {
     
@@ -154,7 +149,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
             } else {
                 switch message {
                 case "list":
-                    let json = encodedJson(ForSounds: sounds)
+                    let json = defaultBoard.json()
                     MQTTService.shared.publish(Message: "manifest:" + json, toChannel: soundboardTopic)
                 default:
                     break
@@ -232,7 +227,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     
     func handle(LocalIndexPath indexPath: IndexPath) {
         if self.isServerSwitch.state == .off {
-            MQTTService.shared.publish(Message: letters[indexPath.section][indexPath.item], toChannel: nil)
+            MQTTService.shared.publish(Message: KEYS[indexPath.section][indexPath.item], toChannel: nil)
         }
         
         if self.playSwitch.state == .on, thereIsSoundAttached(indexPath) {
@@ -255,7 +250,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     }
     
     func indexPath(ofLetter string: String) -> IndexPath? {
-        for (i, array) in letters.enumerated() {
+        for (i, array) in KEYS.enumerated() {
             for (j, letter) in array.enumerated() {
                 if letter == string {
                     return IndexPath(item: j, section: i)
@@ -280,48 +275,11 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         return nil
     }
     
-    func soudMap(ForSounds sounds: [Sound]) -> [[String]] {
-        var soundMap:[[String]] = []
-        
-        for (i, array) in letters.enumerated() {
-            soundMap.append([])
-            for (_, letter) in array.enumerated() {
-                if let soundName = soundName(ForKey: letter, fromSounds: sounds) {
-                    soundMap[i].append(soundName)
-                } else {
-                    soundMap[i].append("")
-                }
-            }
-        }
-        
-        return soundMap
-    }
-    
-    func soundName(ForKey key: String, fromSounds sounds: [Sound]) -> String? {
-        for sound in sounds {
-            if key == sound.key {
-                return sound.title
-            }
-        }
-        
-        return nil
-    }
-    
-    func soundsToJsonable(_ sounds: [Sound]) -> [(String, String)] {
-        var jsonable: [(String, String)] = []
-        
-        for sound in sounds {
-            jsonable.append((sound.title, sound.key))
-        }
-        
-        return jsonable
-    }
-    
     func initPlayers(WithSoundmap soundMap: [[String]]) {
         self.soundMap = soundMap
         self.players = []
         
-        for (i, array) in letters.enumerated() {
+        for (i, array) in KEYS.enumerated() {
             self.players?.append([])
             for (j, _) in array.enumerated() {
                 if !soundMap[i][j].isEmpty {
@@ -334,31 +292,24 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     }
     
     func initPlayers() {
-        initPlayers(WithSoundmap: soudMap(ForSounds: sounds))
+        initPlayers(WithSoundmap: defaultBoard.map())
     }
 
-    func encodedJson(ForSounds sounds: [Sound]) -> String {
-        let jsonEncoder = JSONEncoder()
-        let jsonData = try? jsonEncoder.encode(sounds)
-        let json = String(data: jsonData!, encoding: String.Encoding.utf8)
-        
-        return json!
-    }
 
 //    MARK: CollectionView delegates
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return letters[section].count
+        return KEYS[section].count
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
-        return letters.count
+        return KEYS.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
         
         let item = self.collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "SoundCollectionViewItem"), for: indexPath) as! SoundCollectionViewItem
-        let keyString = letters[indexPath.section][indexPath.item]
+        let keyString = KEYS[indexPath.section][indexPath.item]
         
         var desc: String? = nil
         var imageName: String? = nil
