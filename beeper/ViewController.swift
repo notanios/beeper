@@ -10,10 +10,7 @@ import AVFoundation
 import CocoaMQTT
 import SwiftyJSON
 
-let usernameKey = "usernamekey"
-let passwordKey = "passwordkey"
-let hostKey = "hostkey"
-let portKey = "portkey"
+
 
 struct Connection {
     let username: String
@@ -32,12 +29,6 @@ let letters = [["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
                ["q", "w", "e", "r", "t", "y", "u", "u", "i", "o", "p"],
                ["a", "s", "d", "f", "g", "h", "j", "k", "l"],
                ["z", "x", "c", "v", "b", "n", "m"]]
-
-struct Sound: Codable {
-    let title: String
-    let key: String
-    var duration: Float = 0.0
-}
 
 let sounds = [Sound(title: "badumtss", key: "1"),
               Sound(title: "coin", key: "2"),
@@ -146,7 +137,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         if self.status == .connected {
             self.disconnect()
             return false
-        } else if let connection = self.extractConnection() {
+        } else if let connection = UDService.shared.getConnection() {
             _ = self.connect(withConnection: connection)
             return false
         } else {
@@ -173,7 +164,11 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     }
         
     func didConnect() {
-        self.save(Connection: self.tempConnection!)
+        if let conn = self.tempConnection {
+            UDService.shared.save(Connection: conn)
+        } else {
+            print("❌ Error, no temp connection to save")
+        }
         self.tempConnection = nil
         self.status = .connected
     }
@@ -182,42 +177,6 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         self.status = .disconnected
     }
     
-//    MARK: Saving Connection
-    
-    func save(Connection connection: Connection) -> Void {
-        UserDefaults.standard.register(defaults: [hostKey: connection.host])
-        UserDefaults.standard.register(defaults: [portKey: connection.port])
-        UserDefaults.standard.register(defaults: [usernameKey: connection.username])
-        UserDefaults.standard.register(defaults: [passwordKey: connection.password])
-    }
-    
-    func eraseConnectionData() -> Void {
-        UserDefaults.resetStandardUserDefaults()
-    }
-    
-    func extractConnection() -> Connection? {
-        let username = UserDefaults.standard.value(forKey: usernameKey) as! String?
-        if username == nil {
-            return nil
-        }
-        
-        let password = UserDefaults.standard.value(forKey: passwordKey) as! String?
-        if password == nil {
-            return nil
-        }
-        
-        let host = UserDefaults.standard.value(forKey: hostKey) as! String?
-        if host == nil {
-            return nil
-        }
-        
-        let port = UserDefaults.standard.value(forKey: portKey) as! UInt16?
-        if port == nil {
-            return nil
-        }
-        
-        return Connection(username: username!, password: password!, host: host!, port: port!)
-    }
     
 //    MARK: Custom
     
