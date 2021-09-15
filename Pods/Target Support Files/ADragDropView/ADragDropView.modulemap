@@ -1,0 +1,6 @@
+framework module ADragDropView {
+  umbrella header "ADragDropView-umbrella.h"
+
+  export *
+  module * { export * }
+}

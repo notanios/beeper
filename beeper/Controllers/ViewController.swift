@@ -257,14 +257,12 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         let keyString = KEYS[indexPath.section][indexPath.item]
         
         var desc: String? = nil
-        var imageName: String? = nil
         
         if PlayersManager.shared.isPlayer(atIndexPath: indexPath) {
             desc = PlayersManager.shared.soundMap![indexPath.section][indexPath.item]
-            imageName = "NSTouchBarPlayTemplate"
         }
         
-        item.representedObject = SoundItem(imageName: imageName, keyStrokeName: keyString, desc: desc)
+        item.representedObject = SoundItem(indexPath: indexPath, keyStrokeName: keyString, desc: desc)
         
         return item
     }

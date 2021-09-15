@@ -8,6 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SoundCollectionViewItem" customModule="beeper" customModuleProvider="target">
             <connections>
+                <outlet property="customView" destination="Hz6-mo-xeY" id="MrU-yU-I8T"/>
                 <outlet property="descLabel" destination="IC6-oH-hlF" id="bwS-hj-kmm"/>
                 <outlet property="imageLabel" destination="A9J-wV-pgc" id="EMR-x3-S4z"/>
                 <outlet property="imageView" destination="A9J-wV-pgc" id="ave-vh-95I"/>
@@ -17,7 +18,7 @@
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
-        <customView id="Hz6-mo-xeY">
+        <customView id="Hz6-mo-xeY" customClass="ADragDropView" customModule="ADragDropView">
             <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
@@ -33,12 +34,12 @@
                     </textFieldCell>
                 </textField>
                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-wV-pgc">
-                    <rect key="frame" x="15" y="0.0" width="50" height="50"/>
+                    <rect key="frame" x="15" y="-2" width="50.5" height="54"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="Tpg-wc-zRU"/>
                         <constraint firstAttribute="width" constant="50" id="ZlK-tg-bKg"/>
                     </constraints>
-                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" id="hj8-Ya-84i"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSTouchBarPlayTemplate" id="hj8-Ya-84i"/>
                 </imageView>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J4W-Bd-Lib">
                     <rect key="frame" x="-2" y="6" width="84" height="37"/>
@@ -65,4 +66,7 @@
             <point key="canvasLocation" x="154" y="114"/>
         </customView>
     </objects>
+    <resources>
+        <image name="NSTouchBarPlayTemplate" width="12" height="13"/>
+    </resources>
 </document>

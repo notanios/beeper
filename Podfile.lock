@@ -1,24 +1,28 @@
 PODS:
+  - ADragDropView (1.0.3)
   - CocoaAsyncSocket (7.6.5)
   - CocoaMQTT (1.1.3):
     - CocoaAsyncSocket (~> 7.6.3)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - ADragDropView
   - CocoaMQTT (~> 1.1.3)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
+    - ADragDropView
     - CocoaAsyncSocket
     - CocoaMQTT
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  ADragDropView: 556fb85e52360c2a05bcf5539c4c4ec8b457824c
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   CocoaMQTT: b506d38ad3bbe1c55a4f8ee8c9fd02c35da1a7d8
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 0f8b77beb0f1577757524aff00005a95e01f2ee6
+PODFILE CHECKSUM: 20c02d8f7eaf624c08903fb4d95e1b8836f8eafa
 
 COCOAPODS: 1.10.1

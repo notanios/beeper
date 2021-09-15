@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-beeper-beeperUITests/Pods-beeper-beeperUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ADragDropView/ADragDropView.framework
 ${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
 ${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

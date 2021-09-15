@@ -6,6 +6,7 @@ target 'beeper' do
   use_frameworks!
   pod 'CocoaMQTT', '~>1.1.3'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'ADragDropView'
 
   # Pods for beeper
 
