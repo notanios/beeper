@@ -37,7 +37,7 @@ private let defaultBoard = SoundBoard(title: "Default Board",
                                                Sound(title: "booing", key: "a"),
                                                Sound(title: "cheering", key: "s")])
 
-class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, MQTTCommunicationDelegate, MQTTCOnnectionDelegate {
+class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionViewDataSource, MQTTCommunicationDelegate, MQTTCOnnectionDelegate, DragDropDelegate {
     
     var tempConnection: Connection?
     var timer: Timer?
@@ -263,6 +263,7 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
         }
         
         item.representedObject = SoundItem(indexPath: indexPath, keyStrokeName: keyString, desc: desc)
+        item.delegate = self
         
         return item
     }
@@ -270,6 +271,39 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
         collectionView.deselectItems(at: indexPaths)
         self.handle(LocalIndexPath: indexPaths.first!)
+    }
+    
+    
+//    MARK: Drag and Drop
+    
+    func saveNewSound(withFileUrl url: URL, andName name: String) {
+        print("Last component:: \(name)")
+        
+        
+    }
+    
+    func droped(file url: URL, onCell cell: NSCollectionViewItem, withItem item: SoundItem) {
+        if let desc = item.desc {
+            let alert = NSAlert()
+            alert.messageText = "Want to replace \(desc)?"
+            alert.informativeText = ""
+            alert.addButton(withTitle: "Yes")
+            alert.addButton(withTitle: "No")
+            alert.alertStyle = .warning
+            let res = alert.runModal()
+            switch res {
+            case .alertFirstButtonReturn:
+                self.saveNewSound(withFileUrl: url, andName: url.deletingPathExtension().lastPathComponent)
+            default:
+                print("idk")
+            }
+        } else {
+            self.saveNewSound(withFileUrl: url, andName: url.deletingPathExtension().lastPathComponent)
+        }
+    }
+    
+    func droped(files urls: [URL], onCell cell: NSCollectionViewItem, withItem item: SoundItem) {
+        print("Atempt to drop multiple files. Sorry, this won't work. Not today.")
     }
 
 }
