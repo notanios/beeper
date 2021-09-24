@@ -13,6 +13,7 @@
 		F50DA56126E0CBFB001856B2 /* Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50DA56026E0CBFB001856B2 /* Transitions.swift */; };
 		F52E5C1226EE85160090411D /* booing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F52E5C0F26EE85160090411D /* booing.mp3 */; };
 		F52E5C1326EE85160090411D /* cheering.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F52E5C1026EE85160090411D /* cheering.mp3 */; };
+		F5377DAB26FE25BD000DE307 /* Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5377DAA26FE25BD000DE307 /* Additions.swift */; };
 		F53BCC2026CC04C900E19E41 /* SoundCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */; };
 		F53BCC2126CC04C900E19E41 /* SoundCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */; };
 		F53BCC2326CC05EC00E19E41 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = F53BCC2226CC05EC00E19E41 /* play.png */; };
@@ -68,6 +69,7 @@
 		F50DA56026E0CBFB001856B2 /* Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitions.swift; sourceTree = "<group>"; };
 		F52E5C0F26EE85160090411D /* booing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = booing.mp3; sourceTree = "<group>"; };
 		F52E5C1026EE85160090411D /* cheering.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cheering.mp3; sourceTree = "<group>"; };
+		F5377DAA26FE25BD000DE307 /* Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Additions.swift; sourceTree = "<group>"; };
 		F53BCC1E26CC04C900E19E41 /* SoundCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundCollectionViewItem.swift; sourceTree = "<group>"; };
 		F53BCC1F26CC04C900E19E41 /* SoundCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SoundCollectionViewItem.xib; sourceTree = "<group>"; };
 		F53BCC2226CC05EC00E19E41 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				F5B75F8426DFC65B0061009A /* MQTTService.swift */,
 				F50DA56026E0CBFB001856B2 /* Transitions.swift */,
 				F5CE7AD326EF8E160005F9FB /* PlayersManager.swift */,
+				F5377DAA26FE25BD000DE307 /* Additions.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				F5CE7ACA26EF7E8D0005F9FB /* UDService.swift in Sources */,
 				F5CE7ACB26EF7E8D0005F9FB /* StorageService.swift in Sources */,
 				F5A3572126CBFE9000B0C6FE /* ViewController.swift in Sources */,
+				F5377DAB26FE25BD000DE307 /* Additions.swift in Sources */,
 				F5A3571F26CBFE9000B0C6FE /* AppDelegate.swift in Sources */,
 				F5CE7AD026EF7ED60005F9FB /* Board.swift in Sources */,
 			);
