@@ -858,7 +858,7 @@
                                     <constraint firstAttribute="height" constant="21" id="2l6-ZH-HkQ"/>
                                     <constraint firstAttribute="width" constant="162" id="Cvf-eQ-onM"/>
                                 </constraints>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="host" drawsBackground="YES" usesSingleLineMode="YES" id="AGO-du-gNi">
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="cowsay.show" placeholderString="host" drawsBackground="YES" usesSingleLineMode="YES" id="AGO-du-gNi">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -894,7 +894,7 @@
                                     <constraint firstAttribute="height" constant="21" id="5qh-Ot-nHJ"/>
                                     <constraint firstAttribute="width" constant="162" id="P9z-He-HN9"/>
                                 </constraints>
-                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" title="password" placeholderString="password" drawsBackground="YES" usesSingleLineMode="YES" id="gno-Im-gKs">
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" alignment="center" placeholderString="password" drawsBackground="YES" usesSingleLineMode="YES" id="gno-Im-gKs">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

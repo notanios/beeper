@@ -73,6 +73,8 @@ class ViewController: NSViewController, NSCollectionViewDelegate, NSCollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        StorageManager.shared.createDirInDocuments(dirName: "duck")
+        
         PlayersManager.shared.initPlayers(WithSoundmap: defaultBoard.map())
         
         collectionView.register(SoundCollectionViewItem.self, forItemWithIdentifier: NSUserInterfaceItemIdentifier("SoundCollectionViewItem"))
